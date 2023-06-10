@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/newtemanscaleup/static/css/main.5df4e194.css",
-    "main.js": "/newtemanscaleup/static/js/main.ae62ee7b.js",
+    "main.css": "/newtemanscaleup/static/css/main.a0529545.css",
+    "main.js": "/newtemanscaleup/static/js/main.e7907ae2.js",
     "static/media/trinixsystems.png": "/newtemanscaleup/static/media/trinixsystems.708c3885c1317762a2e5.png",
     "static/media/aktor.png": "/newtemanscaleup/static/media/aktor.074ee8766f83f1b95471.png",
     "static/media/imagesquare.png": "/newtemanscaleup/static/media/imagesquare.98e1fa3ffe5225454a6e.png",
@@ -16,11 +16,11 @@
     "static/media/dekstopheader.svg": "/newtemanscaleup/static/media/dekstopheader.8e80cd26166c3125be01.svg",
     "index.html": "/newtemanscaleup/index.html",
     "static/media/arrow.svg": "/newtemanscaleup/static/media/arrow.c218c9908738447b7ae3bded2419edaf.svg",
-    "main.5df4e194.css.map": "/newtemanscaleup/static/css/main.5df4e194.css.map",
-    "main.ae62ee7b.js.map": "/newtemanscaleup/static/js/main.ae62ee7b.js.map"
+    "main.a0529545.css.map": "/newtemanscaleup/static/css/main.a0529545.css.map",
+    "main.e7907ae2.js.map": "/newtemanscaleup/static/js/main.e7907ae2.js.map"
   },
   "entrypoints": [
-    "static/css/main.5df4e194.css",
-    "static/js/main.ae62ee7b.js"
+    "static/css/main.a0529545.css",
+    "static/js/main.e7907ae2.js"
   ]
 }
