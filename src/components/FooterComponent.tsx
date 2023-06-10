@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from "../pages/dist/img/logo.svg";
 export default function FooterComponent() {
   return (
     <>
-      <footer className="text-white bg-blue-700">
+      <footer className="text-white bg-blue-700 hidden md:block">
         <Font family="Radley">
           <div className="flex justify-center py-10">
             <div className="md:w-10/12 hidden md:grid grid-cols-3  justify-items-center text-xl 2xl:text-2xl">
