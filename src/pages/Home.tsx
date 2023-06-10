@@ -5,6 +5,7 @@ import SosmedIconComponents from "../components/SosmedIconComponents";
 import FixBottomMenuComponent from "../components/FixBottomMenuComponent";
 import BulletCompoent from "../components/BulletCompoent";
 import ButtonComponent from "../components/ButtonComponent";
+import FooterComponent from "../components/FooterComponent";
 import "./dist/style/Home.css";
 import LogoComponent from "../components/LogoComponent";
 import { ReactComponent as IconServiceFocus } from "./dist/img/iconHome/iconFokusLayanan.svg";
@@ -1601,7 +1602,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer></footer>
+      <FooterComponent />
       <div className="h-16 bg-zinc-400 md:hidden"></div>
     </>
   );

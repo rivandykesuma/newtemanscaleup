@@ -8,6 +8,7 @@ import LogoComponent from "../components/LogoComponent";
 import Font, { Text } from "react-font";
 import { GrLineChart } from "react-icons/gr";
 import { BsPencilFill } from "react-icons/bs";
+import FooterComponent from "../components/FooterComponent";
 
 export default function Portfolio() {
   const portfolioheader = require("./dist/img/sampleportfolio.png");
@@ -204,6 +205,7 @@ export default function Portfolio() {
           </div>
         </section>
       </main>
+      <FooterComponent />
       <div className="h-16 bg-zinc-400 md:hidden"></div>
     </>
   );

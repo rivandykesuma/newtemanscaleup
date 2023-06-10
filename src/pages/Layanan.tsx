@@ -3,6 +3,7 @@ import SosmedIconComponents from "../components/SosmedIconComponents";
 import BulletCompoent from "../components/BulletCompoent";
 import FixBottomMenuComponent from "../components/FixBottomMenuComponent";
 import MenuComponent from "../components/MenuComponent";
+import FooterComponent from "../components/FooterComponent";
 import ButtonComponent from "../components/ButtonComponent";
 import LogoComponent from "../components/LogoComponent";
 import Font, { Text } from "react-font";
@@ -414,7 +415,7 @@ function Layanan() {
 
         {/* Pricelist Groupping */}
         <section className="w-full py-5 flex items-center justify-center lg:my-5">
-          <div className="grid grid-cols-1 xl:grid-cols-2 md:w-10/12 gap-5">
+          <div className="grid grid-cols-1 xl:grid-cols-2 lg:w-10/12 gap-5">
             {/* Jasa Pembuatan LandingPage / Website UMKM */}
             <div className="grid grid-cols-2">
               <div className="">
@@ -439,7 +440,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-4/5">
+                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">
@@ -498,7 +499,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-4/5">
+                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">
@@ -557,7 +558,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-4/5">
+                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">
@@ -616,7 +617,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-4/5">
+                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">
@@ -654,7 +655,7 @@ function Layanan() {
           </div>
         </section>
       </main>
-      <footer></footer>
+      <FooterComponent />
       <div className="h-16 bg-zinc-400 md:hidden"></div>
     </>
   );

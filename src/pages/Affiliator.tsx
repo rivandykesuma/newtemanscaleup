@@ -8,6 +8,7 @@ import LogoComponent from "../components/LogoComponent";
 import Font, { Text } from "react-font";
 import { GrLineChart } from "react-icons/gr";
 import { BsPencilFill } from "react-icons/bs";
+import FooterComponent from "../components/FooterComponent";
 
 export default function Affiliator() {
   const portfolioheader = require("./dist/img/sampleportfolio.png");
@@ -183,13 +184,14 @@ export default function Affiliator() {
                 </h1>
                 <ButtonComponent
                   text="Klik Disini"
-                  className=" bg-blue-600 text-white text-sm py-2 px-3 my-3"
+                  className=" bg-blue-600 text-white text-sm py-2 px-3 mt-3"
                 />
               </div>
             </Font>
           </div>
         </section>
       </main>
+      <FooterComponent />
       <div className="h-16 bg-zinc-400 md:hidden"></div>
     </>
   );
