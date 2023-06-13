@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/newtemanscaleup/static/css/main.a0529545.css",
-    "main.js": "/newtemanscaleup/static/js/main.16e94b7c.js",
+    "main.css": "/newtemanscaleup/static/css/main.9c150f6e.css",
+    "main.js": "/newtemanscaleup/static/js/main.d114d045.js",
     "static/media/trinixsystems.png": "/newtemanscaleup/static/media/trinixsystems.708c3885c1317762a2e5.png",
     "static/media/aktor.png": "/newtemanscaleup/static/media/aktor.074ee8766f83f1b95471.png",
     "static/media/imagesquare.png": "/newtemanscaleup/static/media/imagesquare.98e1fa3ffe5225454a6e.png",
@@ -12,15 +12,15 @@
     "static/media/iconFokusLayanan.svg": "/newtemanscaleup/static/media/iconFokusLayanan.bf66d7ef892feae84244dea4a3b6098e.svg",
     "static/media/AllService.svg": "/newtemanscaleup/static/media/AllService.0ad4c4745a2786886b6d79e2a3ac5f14.svg",
     "static/media/goals.svg": "/newtemanscaleup/static/media/goals.c958ad22a7f78d5a0c2a633732b555be.svg",
+    "index.html": "/newtemanscaleup/index.html",
     "static/media/grow.svg": "/newtemanscaleup/static/media/grow.1b49188a08e5b4417b73294e047abd31.svg",
     "static/media/dekstopheader.svg": "/newtemanscaleup/static/media/dekstopheader.8e80cd26166c3125be01.svg",
-    "index.html": "/newtemanscaleup/index.html",
     "static/media/arrow.svg": "/newtemanscaleup/static/media/arrow.c218c9908738447b7ae3bded2419edaf.svg",
-    "main.a0529545.css.map": "/newtemanscaleup/static/css/main.a0529545.css.map",
-    "main.16e94b7c.js.map": "/newtemanscaleup/static/js/main.16e94b7c.js.map"
+    "main.9c150f6e.css.map": "/newtemanscaleup/static/css/main.9c150f6e.css.map",
+    "main.d114d045.js.map": "/newtemanscaleup/static/js/main.d114d045.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0529545.css",
-    "static/js/main.16e94b7c.js"
+    "static/css/main.9c150f6e.css",
+    "static/js/main.d114d045.js"
   ]
 }
