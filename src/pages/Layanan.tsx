@@ -116,7 +116,7 @@ function Layanan() {
                 </div>
               </div>
               {/* 150K */}
-              <div className="w-11/12 h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
+              <div className="w-11/12 h-full bg-lime-600  text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
                 <Font family="Radley">
                   <div className="">
                     <div className="flex flex-col text-sm md:text-xl">
@@ -190,7 +190,7 @@ function Layanan() {
                 </Font>
               </div>
               {/* 500K */}
-              <div className="w-11/12 h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
+              <div className="w-11/12 h-full bg-violet-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
                 <Font family="Radley">
                   <div>
                     <div className="flex flex-col text-sm md:text-xl">
@@ -225,7 +225,7 @@ function Layanan() {
                 </Font>
               </div>
               {/* 750K */}
-              <div className="w-11/12 h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
+              <div className="w-11/12 h-full bg-green-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
                 <Font family="Radley">
                   <div>
                     <div className="flex flex-col text-sm md:text-xl">
@@ -259,7 +259,7 @@ function Layanan() {
                 </Font>
               </div>
               {/* 900K */}
-              <div className="2xl:hidden w-11/12 h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
+              <div className="2xl:hidden w-11/12 h-full bg-slate-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
                 <Font family="Radley">
                   <div>
                     <div className="flex flex-col text-sm md:text-xl">
@@ -293,7 +293,7 @@ function Layanan() {
                 </Font>
               </div>
               {/* Custom */}
-              <div className="2xl:hidden w-1/2 md:w-1/3 h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between col-span-2 md:col-span-3">
+              <div className="2xl:hidden w-1/2 md:w-1/3 h-full bg-red-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between col-span-2 md:col-span-3">
                 <Font family="Radley">
                   <div className="md:w-full">
                     <div className="flex flex-col text-sm md:text-xl">
@@ -339,7 +339,7 @@ function Layanan() {
             <div className="2xl:grid 2xl:grid-cols-2 hidden gap-5">
               {/* 900K */}
               <Font family="Radley">
-                <div className="w-full h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
+                <div className="w-full h-full bg-slate-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
                   <div className="w-1/2">
                     <div className="flex flex-col text-sm md:text-xl">
                       Paket Reguler
@@ -372,7 +372,7 @@ function Layanan() {
               </Font>
               {/* Custom */}
               <Font family="Radley">
-                <div className="w-full h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
+                <div className="w-full h-full bg-red-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
                   <div className="  w-1/2">
                     <div className="flex flex-col text-sm md:text-xl">
                       Paket Reguler
@@ -431,7 +431,7 @@ function Layanan() {
                       Jasa Pembuatan LandingPage / Website UMKM
                     </h1>
 
-                    <div className="h-1 w-1/2  bg-blue-600 my-3 rounded-full"></div>
+                    <div className="h-1 w-1/2  bg-zinc-600 my-3 rounded-full"></div>
                     <h1 className="font-bold">Harga :</h1>
                     <h1 className="w-full font-bold my-1 text-4xl">
                       150K <span className="text-base">(IDR)</span>
@@ -440,7 +440,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
+                <div className=" h-full bg-zinc-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">
@@ -490,7 +490,7 @@ function Layanan() {
                       Jasa Pembuatan Website Professional
                     </h1>
 
-                    <div className="h-1 w-1/2  bg-blue-600 my-3 rounded-full"></div>
+                    <div className="h-1 w-1/2 bg-cyan-600 my-3 rounded-full"></div>
                     <h1 className="font-bold">Harga :</h1>
                     <h1 className="w-full font-bold my-1 text-4xl">
                       650K <span className="text-base">(IDR)</span>
@@ -499,7 +499,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
+                <div className=" h-full bg-cyan-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">
@@ -549,7 +549,7 @@ function Layanan() {
                       Jasa Pembuatan Logo
                     </h1>
 
-                    <div className="h-1 w-1/2  bg-blue-600 my-3 rounded-full"></div>
+                    <div className="h-1 w-1/2 bg-amber-600 my-3 rounded-full"></div>
                     <h1 className="font-bold">Harga :</h1>
                     <h1 className="w-full font-bold my-1 text-4xl">
                       100K <span className="text-base">(IDR)</span>
@@ -558,7 +558,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
+                <div className=" h-full bg-amber-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">
@@ -608,7 +608,7 @@ function Layanan() {
                       Upload Produk di Marketplace
                     </h1>
 
-                    <div className="h-1 w-1/2  bg-blue-600 my-3 rounded-full"></div>
+                    <div className="h-1 w-1/2 bg-indigo-600 my-3 rounded-full"></div>
                     <h1 className="font-bold">Harga :</h1>
                     <h1 className="w-full font-bold my-1 text-4xl">
                       5K <span className="text-base">(IDR)</span>
@@ -617,7 +617,7 @@ function Layanan() {
                 </div>
               </div>
               <div className="grid grid-cols-1 items-center w-full space-y-5 py-5 max-h-[100vh] overflow-auto my-1 justify-items-center">
-                <div className=" h-full bg-blue-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
+                <div className=" h-full bg-indigo-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between w-full md:w-4/5">
                   <Font family="Radley">
                     <div className="">
                       <div className="flex flex-col text-sm md:text-xl">

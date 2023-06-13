@@ -17,13 +17,150 @@ import { BsPencilFill, BsPersonCheck, BsBookmarkCheck } from "react-icons/bs";
 import { MdEditNote } from "react-icons/md";
 import { GrLineChart } from "react-icons/gr";
 import Font, { Text } from "react-font";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 export default function Home() {
   const portfolioheader = require("./dist/img/sampleportfolio.png");
   const portfolioheader1 = require("./dist/img/trinixsystems.png");
   const graphinstagram = require("./dist/img/imageHome/graphinstagram.png");
   const imageconfuse = require("./dist/img/imageHome/image.png");
+  const portfolio = [
+    "Berkah Cahaya Tangguh.png",
+    "Adora.png",
+    "Helwa Beuaty care.png",
+    "Peace of Akhwat.png",
+    "Maedahi.png",
+    "Casade Interior.png",
+    "esteamewaofficial.png",
+    "Gulzar_travel.png",
+    "bitmebite (2).png",
+    "Yana Taste.png",
+    "Kambing Palembang.png",
+    "Workshop Advertising.png",
+    "Dan.deo (1).png",
+    "Tahu Logi.png",
+    "Endul By New Hope.png",
+    "Dwarna.png",
+    "Bank Sampah Bina Mandiri Surabaya.png",
+    "Omah Catering.png",
+    "cocogeneral.id.png",
+    "ptsaka.png",
+    "Stikes RS Anwarmedika.png",
+    "Shoperior.png",
+    "Deli Catering Sby.png",
+    "Sub Jersey.png",
+    "Syza Simply (1).png",
+    "elbarokihealth.png",
+    "Hafizh_Aqiqah.png",
+    "elbarokijayacatering.png",
+    "Umroh Ghifany.png",
+    "Anara.png",
+    "Sewa BBQ.png",
+    "Tahu Walik Bu Jaim.png",
+    "Janji Madu.png",
+    "Qausa.id.png",
+    "MM Workshop.png",
+    "Sagoqu.png",
+    "Trigger Berkarya.png",
+    "Azzam MPASI.png",
+    "Omah_resto.png",
+    "Sub Academy.png",
+    "Sarae.png",
+    "Wahana (1).png",
+    "lovely.beauty.png",
+    "Top Max.png",
+    "Trinixsystems.png",
+    "Tungku_utinanti.png",
+    "Jempoly kriuk.png",
+    "Akun Bareng Store.png",
+    "Safron.png",
+    "Genduts Bomboloni.png",
+    "Esj Property.png",
+    "Herbalito.png",
+    "Bimbel Privat.png",
+    "Cucian Coin Laundry.png",
+    "Jaket Online.png",
+    "Sehati_homecare.png",
+    "Aktaco.id.png",
+    "Campingin.png",
+    "Onic Kitchen.png",
+    "gambang.png",
+    "Inpack Solution.png",
+    "Toko Amalya.png",
+    "Jadahtempe.png",
+    "Es Teh Prima.png",
+  ];
+  const clients = [
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png",
+    "8.png",
+    "9.png",
+    "10.png",
+    "11.png",
+    "12.png",
+    "13.png",
+    "14.png",
+    "15.png",
+    "16.png",
+    "17.png",
+    "18.png",
+    "19.png",
+    "20.png",
+    "21.png",
+    "22.png",
+    "23.png",
+    "24.png",
+    "25.png",
+    "26.png",
+    "27.png",
+    "28.png",
+    "29.png",
+    "30.png",
+    "31.png",
+    "32.png",
+    "33.png",
+    "34.png",
+    "35.png",
+    "36.png",
+    "37.png",
+    "38.png",
+    "39.png",
+    "40.png",
+    "41.png",
+    "42.png",
+    "43.png",
+    "44.png",
+    "45.png",
+    "46.png",
+    "47.png",
+    "48.png",
+    "49.png",
+    "50.png",
+    "51.png",
+    "52.png",
+    "53.png",
+    "54.png",
+    "55.png",
+    "56.png",
+    "57.png",
+    "58.png",
+    "59.png",
+    "60.png",
+    "61.png",
+    "62.png",
+    "63.png",
+    "64.png",
+  ];
 
   return (
     <>
@@ -242,48 +379,20 @@ export default function Home() {
               Client Kami
             </Text>
             <div className="flex flex-row flex-nowrap overflow-x-scroll overflow-y-hidden space-x-5 lg:space-x-7 mx-5  items-center h-fit snap-x">
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
-              <div className="h-16 md:h-28 2xl:40 aspect-square snap-center  ">
-                <LogoComponent />
-              </div>
+              {clients.map((client) => {
+                return (
+                  <div className="h-16 md:h-28 2xl:40 aspect-square snap-center ">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/logo_client/${client}`}
+                      alt={client}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
+
         {/* Portfolio */}
         <section className="w-full md:w-10/12 lg:w-9/12 flex flex-col lg:py-10 self-center my-5 lg:h-[100vh] justify-around">
           <Font family="Radley">
@@ -294,73 +403,99 @@ export default function Home() {
               </span>
             </h1>
           </Font>
-          <div className=" grid grid-cols-[repeat(8,minmax(50%,auto))] gap-3 lg:grid-cols-[repeat(8,minmax(20%,fit))] 2xl:grid-cols-[repeat(8,minmax(30%,fit))] grid-flow-col overflow-x-scroll space-x-2 mx-5 items-center -h-[40vh] lg:-h-[100vh] snap-x py-10">
-            {/* flex flex-row flex-nowrap */}
+          <div className="hidden md:block w-11/12">
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={3}
+              autoplay={{
+                delay: 3000,
+              }}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 5,
+              }}
+              pagination={{ el: ".swiper-pagination", clickable: true }}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                // clickable: true,
+              }}
+              modules={[EffectCoverflow, Pagination, Navigation]}
+              className="swiper_container"
+            >
+              {portfolio.map((p) => {
+                return (
+                  <SwiperSlide>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/portfolio/mockup/${p}`}
+                      alt="slide_image"
+                    />
+                  </SwiperSlide>
+                );
+              })}
 
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
-            <div className="px-2 flex flex-col items-center snap-center h-full w-full  justify-center ">
-              <img
-                src={portfolioheader1}
-                alt="portfolio"
-                className="w-[95%] lg:w-[60%] 2xl:w-[55%] h-auto"
-              />
-              <p className="text-sm">@trinixsystems</p>
-            </div>
+              <div className="slider-controler">
+                <div className="swiper-button-prev slider-arrow">
+                  <BsPersonCheck />
+                </div>
+                <div className="swiper-button-next slider-arrow">
+                  <BsPersonCheck />
+                </div>
+                <div className="swiper-pagination"></div>
+              </div>
+            </Swiper>
+          </div>
+          <div className=" md:hidden w-11/12">
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={1}
+              autoplay={{
+                delay: 3000,
+              }}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 10,
+              }}
+              pagination={{ el: ".swiper-pagination", clickable: true }}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                // clickable: true,
+              }}
+              modules={[EffectCoverflow, Pagination, Navigation]}
+              className="swiper_container"
+            >
+              {portfolio.map((p) => {
+                return (
+                  <SwiperSlide>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/portfolio/mockup/${p}`}
+                      alt="slide_image"
+                    />
+                  </SwiperSlide>
+                );
+              })}
+
+              <div className="slider-controler">
+                <div className="swiper-button-prev slider-arrow">
+                  <BsPersonCheck />
+                </div>
+                <div className="swiper-button-next slider-arrow">
+                  <BsPersonCheck />
+                </div>
+                <div className="swiper-pagination hidden"></div>
+              </div>
+            </Swiper>
           </div>
         </section>
         {/* Jawaban masalah */}
@@ -517,7 +652,7 @@ export default function Home() {
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5  py-3 lg:py-10 gap-5 justify-items-center items-start self-center">
               {/* Pricelist per paket 150K */}
               <div className="w-full flex flex-col justify-center items-center h-full">
-                <div className="w-full bg-blue-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                <div className="w-full bg-lime-600 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
                     <Text family="Radley">Paket Hemat</Text>
                     <Font family="Radley">
@@ -615,7 +750,7 @@ export default function Home() {
 
               {/* Pricelist per paket 500K*/}
               <div className="w-full flex flex-col justify-center items-center h-full ">
-                <div className="w-full bg-blue-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                <div className="w-full bg-violet-600 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
                     <Text family="Radley">Paket Reguler</Text>
                     <Font family="Radley">
@@ -724,7 +859,7 @@ export default function Home() {
 
               {/* Pricelist per paket 750K*/}
               <div className="w-full flex flex-col justify-center items-center h-full  ">
-                <div className="w-full bg-blue-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                <div className="w-full bg-green-600 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
                     <Text family="Radley">Paket Business</Text>
                     <Font family="Radley">
@@ -852,7 +987,7 @@ export default function Home() {
 
               {/* Pricelist per paket 900K*/}
               <div className="w-full flex flex-col justify-center items-center h-full lg:hidden 2xl:flex ">
-                <div className="w-full bg-blue-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                <div className="w-full bg-slate-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
                     <Text family="Radley">Paket Platinum</Text>
                     <Font family="Radley">
@@ -994,7 +1129,7 @@ export default function Home() {
 
               {/* Pricelist per paket 1200K*/}
               <div className="w-full flex flex-col justify-center items-center h-full md:col-span-2 lg:col-span-1 md:w-1/2 lg:w-full lg:hidden 2xl:flex">
-                <div className="w-full bg-blue-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                <div className="w-full bg-red-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
                     <Text family="Radley">Paket Exclusive</Text>
                     <Font family="Radley">
@@ -1142,7 +1277,7 @@ export default function Home() {
                 {/* Pricelist per paket 900K*/}
 
                 <div className="w-3/4 flex flex-col justify-center items-center h-full">
-                  <div className="w-full bg-blue-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                  <div className="w-full bg-slate-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                     <div>
                       <Text family="Radley">Paket Platinum</Text>
                       <Font family="Radley">
@@ -1285,7 +1420,7 @@ export default function Home() {
 
                 {/* Pricelist per paket 1200K*/}
                 <div className="w-3/4 flex flex-col justify-center items-center h-full ">
-                  <div className="w-full bg-blue-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                  <div className="w-full bg-red-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                     <div>
                       <Text family="Radley">Paket Exclusive</Text>
                       <Font family="Radley">
@@ -1564,25 +1699,25 @@ export default function Home() {
             </h1>
           </div>
           <div className="my-10 flex flex-col space-y-5">
-            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-blue-200 py-3 px-3">
+            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-amber-600 text-white py-3 px-3">
               <BsPersonCheck className="h-10 w-auto" />
               <Text family="Raleway" className="text-xl">
                 Jasa Desain Logo
               </Text>
             </div>
-            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-blue-200 py-3 px-3">
+            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-zinc-600 text-white py-3 px-3">
               <BsPersonCheck className="h-10 w-auto" />
               <Text family="Raleway" className="text-xl">
                 Jasa Pembuatan LandingPage / Website UMKM
               </Text>
             </div>
-            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-blue-200 py-3 px-3">
+            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-cyan-600 text-white py-3 px-3">
               <BsPersonCheck className="h-10 w-auto" />
               <Text family="Raleway" className="text-xl">
                 Jasa Pembuatan Website Professional
               </Text>
             </div>
-            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-blue-200 py-3 px-3">
+            <div className="grid grid-cols-[10%_90%] items-center gap-6 rounded-r-full bg-indigo-600 text-white py-3 px-3">
               <BsPersonCheck className="h-10 w-auto" />
               <Text family="Raleway" className="text-xl">
                 Jasa Upload Produk Marketplace
@@ -1590,15 +1725,26 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Call to Action */}
-        <section className="w-11/12 md:w-10/12 lg:w-9/12 flex flex-col items-center justify-center lg:py-10 self-center my-5">
-          <Font family="Radley">
-            <h1 className="pt-3 text-3xl md:text-4xl 2xl:text-6xl font-extrabold  flex items-end justify-center text-center">
-              MAU BELAJAR CARA BIKIN KONTEN SENDIRI?
-            </h1>
-          </Font>
-          <div className="bg-[#00A3FF] text-white rounded-full inline py-3 px-3 font-bold my-3">
-            <Text family="Radley">KLIK DISINI</Text>
+        {/* CTA Order */}
+        <section className="">
+          <div className=" h-full flex justify-center items-center bg-blue-200">
+            <Font family="Radley">
+              <div className="bg-white rounded-xl py-5 flex flex-col my-10 px-5">
+                <div className="flex items-center justify-center ">
+                  <h1 className="font-bold text-center text-lg my-2">
+                    Ingin Kerjasama Dengan
+                  </h1>
+                  <LogoComponent className="w-fit h-8 mb-3" />
+                </div>
+                <h1 className="text-center text-sm my-3">
+                  Harga Berubah Sewaktu - waktu <br /> Segera Hubungi Kami
+                </h1>
+                <ButtonComponent
+                  text="Klik Disini"
+                  className=" bg-blue-600 text-white text-sm py-2 px-3 my-3"
+                />
+              </div>
+            </Font>
           </div>
         </section>
       </main>

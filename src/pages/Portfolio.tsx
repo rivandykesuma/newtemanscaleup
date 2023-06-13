@@ -15,6 +15,67 @@ export default function Portfolio() {
   const portfolioheader1 = require("./dist/img/trinixsystems.png");
   const aktor = require("./dist/img/imageAffiliate/aktor.png");
   const portfolioheader2 = require("./dist/img/imageGaleri/imagesquare.png");
+  const portfolio = [
+    "esteamewaofficial.png",
+    "Gulzar_travel.png",
+    "bitmebite (2).png",
+    "Yana Taste.png",
+    "Kambing Palembang.png",
+    "Workshop Advertising.png",
+    "Dan.deo (1).png",
+    "Tahu Logi.png",
+    "Endul By New Hope.png",
+    "Dwarna.png",
+    "Bank Sampah Bina Mandiri Surabaya.png",
+    "Omah Catering.png",
+    "cocogeneral.id.png",
+    "ptsaka.png",
+    "Stikes RS Anwarmedika.png",
+    "Shoperior.png",
+    "Deli Catering Sby.png",
+    "Sub Jersey.png",
+    "Syza Simply (1).png",
+    "elbarokihealth.png",
+    "Hafizh_Aqiqah.png",
+    "elbarokijayacatering.png",
+    "Umroh Ghifany.png",
+    "Anara.png",
+    "Sewa BBQ.png",
+    "Tahu Walik Bu Jaim.png",
+    "Janji Madu.png",
+    "Qausa.id.png",
+    "MM Workshop.png",
+    "Sagoqu.png",
+    "Trigger Berkarya.png",
+    "Azzam MPASI.png",
+    "Omah_resto.png",
+    "Sub Academy.png",
+    "Sarae.png",
+    "Wahana (1).png",
+    "lovely.beauty.png",
+    "Top Max.png",
+    "Trinixsystems.png",
+    "Tungku_utinanti.png",
+    "Jempoly kriuk.png",
+    "Akun Bareng Store.png",
+    "Safron.png",
+    "Genduts Bomboloni.png",
+    "Esj Property.png",
+    "Herbalito.png",
+    "Bimbel Privat.png",
+    "Cucian Coin Laundry.png",
+    "Jaket Online.png",
+    "Sehati_homecare.png",
+    "Aktaco.id.png",
+    "Campingin.png",
+    "Onic Kitchen.png",
+    "gambang.png",
+    "Inpack Solution.png",
+    "Toko Amalya.png",
+    "Jadahtempe.png",
+    "Es Teh Prima.png",
+  ];
+
   return (
     <>
       {/* Header Design */}
@@ -54,7 +115,7 @@ export default function Portfolio() {
               className="block lg:hidden h-28 md:h-[20vh] lg:h-[35vh] w-auto bottom-0"
             />
             <img
-              src={portfolioheader1}
+              src={`${process.env.PUBLIC_URL}/portfolio/mockup/Berkah Cahaya Tangguh.png`}
               alt="portfolio"
               className="hidden lg:block h-40 md:h-80 lg:h-[80vh] w-auto ml-[50vw] mt-[15vh] "
             />
@@ -68,16 +129,28 @@ export default function Portfolio() {
         <section className="">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-0.5 lg:grid-cols-4 my-0.5">
             <div className="bg-yellow-200 ">
-              <img src={portfolioheader1} alt="Trynix" />
+              <img
+                src={`${process.env.PUBLIC_URL}/portfolio/mockup/Casade Interior.png`}
+                alt="Casade Interior"
+              />
             </div>
             <div className="bg-violet-200">
-              <img src={portfolioheader1} alt="Trynix" />
+              <img
+                src={`${process.env.PUBLIC_URL}/portfolio/mockup/Helwa Beuaty care.png`}
+                alt="Helwa Beuaty care"
+              />
             </div>
             <div className="bg-green-200">
-              <img src={portfolioheader1} alt="Trynix" />
+              <img
+                src={`${process.env.PUBLIC_URL}/portfolio/mockup/Peace of Akhwat.png`}
+                alt="Peace of Akhwat"
+              />
             </div>
             <div className="bg-blue-200 md:hidden lg:block">
-              <img src={portfolioheader1} alt="Trynix" />
+              <img
+                src={`${process.env.PUBLIC_URL}/portfolio/mockup/Maedahi.png`}
+                alt="Maedahi"
+              />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -133,51 +206,16 @@ export default function Portfolio() {
               <div className="h-0.5 w-1/4 rounded-full bg-black my-2"></div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5">
-                <img src={portfolioheader1} alt="" />
-              </div>
-              <div className="w-full aspect-square mb-0.5 hidden md:block">
-                <img src={portfolioheader1} alt="" />
-              </div>
+              {portfolio.map((p) => {
+                return (
+                  <div className="w-full aspect-square mb-0.5">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/portfolio/mockup/${p}`}
+                      alt={p}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </Font>
         </section>
