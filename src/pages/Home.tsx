@@ -658,10 +658,9 @@ export default function Home() {
             <div className="grid grid-cols-[20%_80%] justify-items-start items-center">
               <MdEditNote className="h-8 md:h-14 w-auto inline justify-self-center" />
               <h1 className="text-lg md:text-2xl ">
-                Garansi Teman Bisnis Sejati! Nggak cuma bikin konten, kami juga
-                siap jadi teman curhat bisnis Anda. Layanan ramah dan bisa jadi
-                teman brainstrorming ide konten untuk bisnis Anda. Nikmati
-                layanan Konsultasi Gratis
+                Nggak cuma bikin konten, kami juga siap jadi teman curhat bisnis
+                Anda. Layanan ramah dan bisa jadi teman brainstrorming ide
+                konten untuk bisnis Anda. Nikmati layanan Konsultasi Gratis
               </h1>
             </div>
           </div>
