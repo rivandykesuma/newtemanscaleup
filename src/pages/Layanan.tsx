@@ -9,7 +9,10 @@ import LogoComponent from "../components/LogoComponent";
 import Font, { Text } from "react-font";
 import { GrLineChart } from "react-icons/gr";
 import { BsPencilFill } from "react-icons/bs";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ImageSlideShowHeaderComponents from "../components/ImageSlideShowHeaderComponents";
+import ButtonOrderPaket from "../components/ButtonOrderPaket";
+import NavbarMenu from "../components/NavbarMenu";
 
 function Layanan() {
   const portfolioheader = require("./dist/img/sampleportfolio.png");
@@ -18,55 +21,91 @@ function Layanan() {
   return (
     <>
       {/* Header Design */}
-      <header className="relative w-full">
-        {/* Navbar Menu */}
-        <div className="absolute w-full flex justify-center z-50">
-          <div className="flex w-11/12 md:w-10/12 lg:w-9/12 justify-items-center justify-center  md:justify-between py-0 md:py-2 ">
-            <LogoComponent className="h-5 md:h-10 lg:h-15 w-auto" />
-            <MenuComponent className="text-white self-center text-base lg:text-xl " />
-          </div>
-          <div className="fixed inset-x-0 bottom-0 md:hidden ">
-            <FixBottomMenuComponent />
-          </div>
-        </div>
+      <header className="relative">
+        <NavbarMenu />
         {/* Hero Section */}
-        <div className="relative flex justify-center h-[35vh] md:h-[30vh] lg:h-[100vh]">
-          <div className="absolute z-50 self-center text-white w-10/12 md:w-10/12 lg:w-9/12">
-            <h1 className="text-sm md:text-2xl lg:text-4xl   font-bold w-3/4 md:w-1/2 text-left mt-10">
-              AGENCY SOSIAL MEDIA MENAJEMEN PULUHAN BRAND DI BERBAGAI KOTA TELAH
-              MENGGUNAKAN JASA KAMI
+
+        <div
+          className="relative md:grid md:grid-cols-2 justify-items-center flex justify-around h-[35vh] md:h-[30vh] lg:h-[100vh] overflow-hidden bg-blue-500" // Warna biru dominan
+          style={{
+            backgroundImage:
+              'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="%23172554"/><path d="M0 20L20 0H0V20Z" fill="%23FACC15" opacity="0.1"/></svg>\')', // Pola segitiga kecil kuning samar
+            backgroundSize: "70px 70px", // Ukuran pola
+          }}
+        >
+          {/* Memuat Tailwind CSS CDN untuk styling */}
+          <script src="https://cdn.tailwindcss.com"></script>
+          {/* Meta viewport untuk responsivitas */}
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          {/* Memuat font Poppins dari Google Fonts */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+
+          {/* Background Bubble Layer - TIDAK DIUBAH */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute top-10 left-10 w-24 h-24 rounded-full border-4 border-yellow-400 bg-blue-800/30 blur-sm animate-ping"></div>
+            <div className="absolute bottom-20 right-16 w-32 h-32 rounded-full border-4 border-yellow-200 bg-blue-700/40 blur-sm animate-ping"></div>
+            <div className="absolute top-36 left-1/2 w-40 h-40 rounded-full border-4 border-yellow-200 bg-blue-600/20 blur-lg  transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-5 left-1/3 w-20 h-20 rounded-full border-2 border-yellow-200 bg-blue-600/20 blur-sm"></div>
+            <div className="absolute top-10 right-10 w-24 h-24 rounded-full border-4 border-yellow-400 bg-blue-800/30 blur-sm animate-pulse"></div>
+            <div className="absolute top-20 right-16 w-32 h-32 rounded-full border-4 border-yellow-300 bg-blue-700/40 blur-sm animate-ping"></div>
+            <div className="absolute bottom-36 right-1/2 w-40 h-40 rounded-full border-4 border-yellow-500 bg-blue-700/30 blur-lg transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-5 left-1/3 w-20 h-20 rounded-full border-2 border-yellow-200 bg-blue-600/20 blur-sm animate-ping"></div>
+          </div>
+
+          {/* Konten Utama (Text, Bullet Points, Social Media) */}
+          <div className="absolute md:static z-50 self-center text-white w-10/12 md:w-10/12 lg:w-9/12 p-4 md:p-0">
+            {" "}
+            {/* Menambah padding untuk layar kecil */}
+            {/* Judul Utama yang Lebih Profesional dan Menarik */}
+            <h1 className="text-sm md:text-2xl lg:text-5xl font-bold w-3/4 md:w-full text-left mt-10 font-['Poppins'] tracking-wide leading-tight">
+              {/* Menggunakan warna kuning untuk penekanan pada "Terbukti!" */}
+              {/* <span className="block text-yellow-300 text-xl md:text-3xl lg:text-6xl">
+                Terbukti!
+              </span> */}
+              <span className="block mt-2 text-white md:text-3xl lg:text-5xl">
+                Kami Siap Bantu Scale Up Bisnismu!
+              </span>
             </h1>
-            <div>
-              <div className="flex my-2 lg:my-5 space-x-2 lg:space-x-10">
-                <BulletCompoent />
+            {/* Bagian Bullet Points */}
+            <div className="flex my-4 lg:my-8 space-x-2 lg:space-x-10">
+              {" "}
+              {/* Menyesuaikan margin */}
+              <BulletCompoent />
+            </div>
+            {/* Bagian Informasi Sosial Media */}
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8 mt-6">
+              {" "}
+              {/* Menyesuaikan gap dan margin-top */}
+              <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-medium text-yellow-200">
+                {" "}
+                {/* Mengubah warna teks untuk penekanan */}
+                @teman.scaleup
+              </p>
+              <span className="hidden lg:block h-6 w-px bg-white/50"></span>
+              <div className="flex space-x-3 md:space-x-5 lg:text-3xl text-lg">
+                <SosmedIconComponents />
               </div>
             </div>
-            <p className="text-sm md:text-xl lg:text-2xl 2xl:text-4xl block lg:flex items-center">
-              @teman.scaleup <span className="mx-5 hidden lg:flex">|</span>
-              <span className="flex space-x-5 md:ml-3 ml-0 my-2 md:my-0 text-base md:text-2xl lg:text-2xl 2xl:text-3xl ">
-                <SosmedIconComponents />
-              </span>
-            </p>
           </div>
-          <div className="absolute lg:relative -z-1 bottom-0 right-0">
-            <img
-              src={portfolioheader}
-              alt="portfolio"
-              className="block lg:hidden h-28 md:h-[20vh] lg:h-[35vh] w-auto bottom-0"
-            />
-            <img
-              src={portfolioheader1}
-              alt="portfolio"
-              className="hidden lg:block h-40 md:h-80 lg:h-[80vh] w-auto ml-[50vw] mt-[15vh] "
-            />
+
+          {/* Slider Images - TIDAK DIUBAH */}
+          <div className="absolute -z-1 bottom-0 md:bottom-16 right-0 md:right-1/4">
+            <ImageSlideShowHeaderComponents className="block md:hidden h-[30vh] md:h-[40vh] lg:h-[35vh] w-full bottom-0 right-0" />
+            <ImageSlideShowHeaderComponents className="hidden md:block h-40 md:h-80 lg:h-[80vh] w-full" />
           </div>
         </div>
       </header>
       <main>
         {/* Pricelist Kelola Instagram */}
-        <section className="w-full py-5 flex items-center justify-center lg:my-5">
-          <div className="grid grid-cols-1 md:w-10/12">
-            <div className="grid justify-items-center  grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 items-center w-full gap-y-5 py-5 h-fit my-1">
+        <section className="w-full py-5 flex items-center justify-center lg:my-5 fadeIn">
+          <div className="grid grid-cols-1 md:w-10/12 w-fit">
+            <div className="grid justify-items-center  grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 items-center w-full gap-y-5 py-5 h-fit my-1">
               <div className="">
                 <LogoComponent className="w-1/2 h-auto" />
                 <div className="bg-blue-200 w-fit ps-3 pe-5 py-5 rounded-r-full">
@@ -120,10 +159,10 @@ function Layanan() {
                 <Font family="Radley">
                   <div className="">
                     <div className="flex flex-col text-sm md:text-xl">
-                      Paket Reguler
+                      Paket Hemat
                     </div>
                     <div className="text-2xl md:text-5xl">
-                      150K <sub className="text-base"> (IDR)</sub>
+                      250K <sub className="text-base"> (IDR)</sub>
                     </div>
                     <div className="bg-white h-1 w-3/4 my-2 md:my-5 rounded-full"></div>
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
@@ -142,10 +181,7 @@ function Layanan() {
                 </Font>
                 <Font family="Radley">
                   <div className="flex flex-col items-center h-auto self-end w-full justify-center">
-                    <ButtonComponent
-                      text="Order Paket Reguler"
-                      className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                    />
+                    <ButtonOrderPaket paket="Paket Reguler" />
                   </div>
                 </Font>
               </div>
@@ -154,10 +190,10 @@ function Layanan() {
                 <Font family="Radley">
                   <div>
                     <div className="flex flex-col text-sm md:text-xl">
-                      Paket Reguler
+                      Paket Cermat
                     </div>
                     <div className="text-2xl md:text-5xl">
-                      350K <sub className="text-base"> (IDR)</sub>
+                      450K <sub className="text-base"> (IDR)</sub>
                     </div>
                     <div className="bg-white h-1 w-3/4 my-2"></div>
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
@@ -182,10 +218,7 @@ function Layanan() {
                 </Font>
                 <Font family="Radley">
                   <div className="flex w-full  justify-center">
-                    <ButtonComponent
-                      text="Order Paket Reguler"
-                      className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                    />
+                    <ButtonOrderPaket paket="Paket Cermat" />
                   </div>
                 </Font>
               </div>
@@ -197,7 +230,7 @@ function Layanan() {
                       Paket Reguler
                     </div>
                     <div className="text-2xl md:text-5xl">
-                      500K <sub className="text-base"> (IDR)</sub>
+                      600K <sub className="text-base"> (IDR)</sub>
                     </div>
                     <div className="bg-white h-1 w-3/4 my-2"></div>
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
@@ -217,22 +250,19 @@ function Layanan() {
                 </Font>
                 <Font family="Radley">
                   <div className="flex w-full  justify-center">
-                    <ButtonComponent
-                      text="Order Paket Reguler"
-                      className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                    />
+                    <ButtonOrderPaket paket="Paket Reguler" />
                   </div>
                 </Font>
               </div>
               {/* 750K */}
-              <div className="w-11/12 h-full bg-green-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
+              {/* <div className="w-11/12 h-full bg-green-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
                 <Font family="Radley">
                   <div>
                     <div className="flex flex-col text-sm md:text-xl">
-                      Paket Reguler
+                      Paket Bussines
                     </div>
                     <div className="text-2xl md:text-5xl">
-                      750K <sub className="text-base"> (IDR)</sub>
+                      850K <sub className="text-base"> (IDR)</sub>
                     </div>
                     <div className="bg-white h-1 w-3/4 my-2"></div>
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
@@ -251,22 +281,20 @@ function Layanan() {
                 </Font>
                 <Font family="Radley">
                   <div className="flex w-full  justify-center">
-                    <ButtonComponent
-                      text="Order Paket Reguler"
-                      className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                    />
+                    <ButtonOrderPaket paket="Paket Business" />
                   </div>
                 </Font>
-              </div>
+              </div> */}
               {/* 900K */}
+
               <div className="2xl:hidden w-11/12 h-full bg-slate-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between">
                 <Font family="Radley">
                   <div>
                     <div className="flex flex-col text-sm md:text-xl">
-                      Paket Reguler
+                      Paket Platinum
                     </div>
                     <div className="text-2xl md:text-5xl">
-                      900K <sub className="text-base"> (IDR)</sub>
+                      850K <sub className="text-base"> (IDR)</sub>
                     </div>
                     <div className="bg-white h-1 w-3/4 my-2"></div>
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
@@ -278,22 +306,50 @@ function Layanan() {
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
                       <BsPencilFill />
                       <div className="text-sm md:text-xl">
-                        Jumlah konten 30 (10 jpg & 20 video reels)
+                        Jumlah konten 30 (15 jpg & 15 video reels)
                       </div>
                     </div>
                   </div>
                 </Font>
                 <Font family="Radley">
                   <div className="flex w-full  justify-center">
-                    <ButtonComponent
-                      text="Order Paket Reguler"
-                      className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                    />
+                    <ButtonOrderPaket paket="Paket Platinum" />
+                  </div>
+                </Font>
+              </div>
+              {/* 1200K */}
+              <div className="2xl:hidden w-11/12 h-full bg-red-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between md:col-span-1">
+                <Font family="Radley">
+                  <div>
+                    <div className="flex flex-col text-sm md:text-xl">
+                      Paket Gold
+                    </div>
+                    <div className="text-2xl md:text-5xl">
+                      1.300K <sub className="text-base"> (IDR)</sub>
+                    </div>
+                    <div className="bg-white h-1 w-3/4 my-2"></div>
+                    <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
+                      <BsPencilFill className="" />
+                      <div className="text-sm md:text-xl">
+                        Produksi Konten (Video)
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
+                      <BsPencilFill />
+                      <div className="text-sm md:text-xl">
+                        Jumlah konten 30 (Full VIDEO)
+                      </div>
+                    </div>
+                  </div>
+                </Font>
+                <Font family="Radley">
+                  <div className="flex w-full  justify-center">
+                    <ButtonOrderPaket paket="Paket Gold" />
                   </div>
                 </Font>
               </div>
               {/* Custom */}
-              <div className="2xl:hidden w-1/2 md:w-1/3 h-full bg-red-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between col-span-2 md:col-span-3">
+              {/* <div className="2xl:hidden w-1/2 md:w-1/3 h-full bg-red-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between col-span-2 md:col-span-3">
                 <Font family="Radley">
                   <div className="md:w-full">
                     <div className="flex flex-col text-sm md:text-xl">
@@ -333,19 +389,20 @@ function Layanan() {
                     />
                   </div>
                 </Font>
-              </div>
+              </div> */}
             </div>
+
             {/* Responsive 900K & Custom */}
             <div className="2xl:grid 2xl:grid-cols-2 hidden gap-5">
               {/* 900K */}
               <Font family="Radley">
-                <div className="w-full h-full bg-slate-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
+                <div className="w-full h-full bg-green-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
                   <div className="w-1/2">
                     <div className="flex flex-col text-sm md:text-xl">
-                      Paket Reguler
+                      Paket Bussines
                     </div>
                     <div className="text-2xl md:text-5xl">
-                      900K <sub className="text-base"> (IDR)</sub>
+                      850K <sub className="text-base"> (IDR)</sub>
                     </div>
                     <div className="bg-white h-1 w-3/4 my-2"></div>
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
@@ -357,21 +414,48 @@ function Layanan() {
                     <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
                       <BsPencilFill />
                       <div className="text-sm md:text-xl">
-                        Jumlah konten 30 (10 jpg & 20 video reels)
+                        Jumlah konten 30 (15 jpg & 15 video reels)
                       </div>
                     </div>
                   </div>
 
                   <div className="flex   justify-center w-1/2">
-                    <ButtonComponent
-                      text="Order Paket Reguler"
-                      className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-full justify-self-center"
-                    />
+                    <ButtonOrderPaket paket="Paket Bussines" />
+                  </div>
+                </div>
+              </Font>
+              {/* 1200K */}
+              <Font family="Radley">
+                <div className="w-full h-full bg-red-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
+                  <div className="w-1/2">
+                    <div className="flex flex-col text-sm md:text-xl">
+                      Paket Gold
+                    </div>
+                    <div className="text-2xl md:text-5xl">
+                      1200K <sub className="text-base"> (IDR)</sub>
+                    </div>
+                    <div className="bg-white h-1 w-3/4 my-2"></div>
+                    <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
+                      <BsPencilFill className="" />
+                      <div className="text-sm md:text-xl">
+                        Produksi Konten (Foto & Video)
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
+                      <BsPencilFill />
+                      <div className="text-sm md:text-xl">
+                        Jumlah konten 30 (Full VIDEO)
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex   justify-center w-1/2">
+                    <ButtonOrderPaket paket="Paket Gold" />
                   </div>
                 </div>
               </Font>
               {/* Custom */}
-              <Font family="Radley">
+              {/* <Font family="Radley">
                 <div className="w-full h-full bg-red-600 text-white shadow-md rounded-xl py-3 px-3 flex flex-col justify-between items-center">
                   <div className="  w-1/2">
                     <div className="flex flex-col text-sm md:text-xl">
@@ -408,16 +492,16 @@ function Layanan() {
                     />
                   </div>
                 </div>
-              </Font>
+              </Font> */}
             </div>
           </div>
         </section>
 
         {/* Pricelist Groupping */}
-        <section className="w-full py-5 flex items-center justify-center lg:my-5">
+        <section className="w-full py-5 flex items-center justify-center lg:my-5 fadeIn">
           <div className="grid grid-cols-1 xl:grid-cols-2 lg:w-10/12 gap-5">
             {/* Jasa Pembuatan LandingPage / Website UMKM */}
-            <div className="grid grid-cols-2">
+            {/* <div className="grid grid-cols-2">
               <div className="">
                 <LogoComponent className="w-1/2 lg:w-1/3 2xl:w-1/4 h-auto" />
                 <div className="bg-blue-200 w-fit ps-3 pe-5 py-5 rounded-r-full">
@@ -453,28 +537,25 @@ function Layanan() {
                       <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
                         <BsPencilFill className="" />
                         <div className="text-sm md:text-xl">
-                          Produksi Konten (Foto)
+                          Website company profile dibuat dari Google Site
                         </div>
                       </div>
                       <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
                         <BsPencilFill />
                         <div className="text-sm md:text-xl">
-                          Jumlah konten 9 feed (jpg) - single post
+                          Halaman Website 1 halaman
                         </div>
                       </div>
                     </div>
                   </Font>
                   <Font family="Radley">
                     <div className="flex flex-col items-center h-auto self-end w-full justify-center">
-                      <ButtonComponent
-                        text="Order Landing Page"
-                        className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                      />
+                      <ButtonOrderPaket paket="Landing Page" />
                     </div>
                   </Font>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Jasa Pembuatan Website Professional */}
             <div className="grid grid-cols-2">
               <div className="">
@@ -493,7 +574,7 @@ function Layanan() {
                     <div className="h-1 w-1/2 bg-cyan-600 my-3 rounded-full"></div>
                     <h1 className="font-bold">Harga :</h1>
                     <h1 className="w-full font-bold my-1 text-4xl">
-                      650K <span className="text-base">(IDR)</span>
+                      1000K <span className="text-base">(IDR)</span>
                     </h1>
                   </Font>
                 </div>
@@ -506,29 +587,30 @@ function Layanan() {
                         Jasa Pembuatan Website Professional
                       </div>
                       <div className="text-2xl md:text-5xl">
-                        650K <sub className="text-base"> (IDR)</sub>
+                        1000K <sub className="text-base"> (IDR)</sub>
                       </div>
                       <div className="bg-white h-1 w-3/4 my-2 md:my-5 rounded-full"></div>
-                      <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
+                      {/* <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
                         <BsPencilFill className="" />
                         <div className="text-sm md:text-xl">
-                          Produksi Konten (Foto)
+                          Website Company Profile Static 1-2 Halaman
+                        </div>
+                      </div> */}
+                      <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
+                        <BsPencilFill />
+                        <div className="text-sm md:text-xl">
+                          tanpa Akses Hosting
                         </div>
                       </div>
                       <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
                         <BsPencilFill />
-                        <div className="text-sm md:text-xl">
-                          Jumlah konten 9 feed (jpg) - single post
-                        </div>
+                        <div className="text-sm md:text-xl">domain .com</div>
                       </div>
                     </div>
                   </Font>
                   <Font family="Radley">
                     <div className="flex flex-col items-center h-auto self-end w-full justify-center">
-                      <ButtonComponent
-                        text="Order Website Professional"
-                        className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                      />
+                      <ButtonOrderPaket paket="Website Professional" />
                     </div>
                   </Font>
                 </div>
@@ -552,7 +634,7 @@ function Layanan() {
                     <div className="h-1 w-1/2 bg-amber-600 my-3 rounded-full"></div>
                     <h1 className="font-bold">Harga :</h1>
                     <h1 className="w-full font-bold my-1 text-4xl">
-                      100K <span className="text-base">(IDR)</span>
+                      500K <span className="text-base">(IDR)</span>
                     </h1>
                   </Font>
                 </div>
@@ -565,29 +647,24 @@ function Layanan() {
                         Jasa Pembuatan Logo
                       </div>
                       <div className="text-2xl md:text-5xl">
-                        150K <sub className="text-base"> (IDR)</sub>
+                        500K <sub className="text-base"> (IDR)</sub>
                       </div>
                       <div className="bg-white h-1 w-3/4 my-2 md:my-5 rounded-full"></div>
                       <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
                         <BsPencilFill className="" />
-                        <div className="text-sm md:text-xl">
-                          Produksi Konten (Foto)
-                        </div>
+                        <div className="text-sm md:text-xl">Produksi Logo</div>
                       </div>
                       <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
                         <BsPencilFill />
                         <div className="text-sm md:text-xl">
-                          Jumlah konten 9 feed (jpg) - single post
+                          Revisi Sesuai Ketentuan
                         </div>
                       </div>
                     </div>
                   </Font>
                   <Font family="Radley">
                     <div className="flex flex-col items-center h-auto self-end w-full justify-center">
-                      <ButtonComponent
-                        text="Order Pembuatan Logo"
-                        className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                      />
+                      <ButtonOrderPaket paket="Pembuatan Logo" />
                     </div>
                   </Font>
                 </div>
@@ -630,23 +707,14 @@ function Layanan() {
                       <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center">
                         <BsPencilFill className="" />
                         <div className="text-sm md:text-xl">
-                          Produksi Konten (Foto)
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] gap-2 text-sm py-1 items-center ">
-                        <BsPencilFill />
-                        <div className="text-sm md:text-xl">
-                          Jumlah konten 9 feed (jpg) - single post
+                          Jumlah Upload Per Produk
                         </div>
                       </div>
                     </div>
                   </Font>
                   <Font family="Radley">
                     <div className="flex flex-col items-center h-auto self-end w-full justify-center">
-                      <ButtonComponent
-                        text="Order Upload Produk"
-                        className="bg-white text-black text-sm md:text-xl py-1 px-3 my-3 w-11/12 justify-self-center"
-                      />
+                      <ButtonOrderPaket paket="Upload Produk" />
                     </div>
                   </Font>
                 </div>

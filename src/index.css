@@ -15,3 +15,71 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Jika perlu menambahkan font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease;
+  -webkit-animation: fadeIn 1s ease;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 8s ease-in-out 2s infinite;
+}
+
+/* Untuk animasi tambahan */
+@keyframes button-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: button-pulse 1.5s infinite;
+}
+
+/* Transisi untuk mobile menu */
+.mobile-menu-enter {
+  transform: translateX(100%);
+}
+.mobile-menu-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-out;
+}
+.mobile-menu-exit {
+  transform: translateX(0);
+}
+.mobile-menu-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in;
+}

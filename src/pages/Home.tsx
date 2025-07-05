@@ -3,6 +3,7 @@ import MenuComponent from "../components/MenuComponent";
 import { Link } from "react-router-dom";
 import SosmedIconComponents from "../components/SosmedIconComponents";
 import FixBottomMenuComponent from "../components/FixBottomMenuComponent";
+import NavbarMenu from "../components/NavbarMenu";
 import BulletCompoent from "../components/BulletCompoent";
 import ButtonComponent from "../components/ButtonComponent";
 import FooterComponent from "../components/FooterComponent";
@@ -23,6 +24,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import CallToActionWA from "../components/CallToAction";
+import ImageSlideShowHeaderComponents from "../components/ImageSlideShowHeaderComponents";
+import ButtonOrderPaket from "../components/ButtonOrderPaket";
 
 export default function Home() {
   const portfolioheader = require("./dist/img/sampleportfolio.png");
@@ -166,53 +170,89 @@ export default function Home() {
     <>
       {/* Header Design */}
       <header className="relative">
-        {/* Navbar Menu */}
-        <div className="absolute w-full flex justify-center z-50">
-          <div className="flex w-11/12 md:w-10/12 lg:w-9/12 justify-items-center justify-center  md:justify-between py-0 md:py-2 ">
-            <LogoComponent className="h-5 md:h-10 lg:h-15 w-auto" />
-            <MenuComponent className="text-white self-center text-base lg:text-xl " />
-          </div>
-          <div className="fixed inset-x-0 bottom-0 md:hidden ">
-            <FixBottomMenuComponent />
-          </div>
-        </div>
+        <NavbarMenu />
         {/* Hero Section */}
-        <div className="relative flex justify-center h-[35vh] md:h-[30vh] lg:h-[100vh]">
-          <div className="absolute z-50 self-center text-white w-10/12 md:w-10/12 lg:w-9/12">
-            <h1 className="text-sm md:text-2xl lg:text-4xl   font-bold w-3/4 md:w-1/2 text-left mt-10">
-              AGENCY SOSIAL MEDIA MENAJEMEN PULUHAN BRAND DI BERBAGAI KOTA TELAH
-              MENGGUNAKAN JASA KAMI
+
+        <div
+          className="relative md:grid md:grid-cols-2 justify-items-center flex justify-around h-[35vh] md:h-[30vh] lg:h-[100vh] overflow-hidden bg-blue-500" // Warna biru dominan
+          style={{
+            backgroundImage:
+              'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="%23172554"/><path d="M0 20L20 0H0V20Z" fill="%23FACC15" opacity="0.1"/></svg>\')', // Pola segitiga kecil kuning samar
+            backgroundSize: "70px 70px", // Ukuran pola
+          }}
+        >
+          {/* Memuat Tailwind CSS CDN untuk styling */}
+          <script src="https://cdn.tailwindcss.com"></script>
+          {/* Meta viewport untuk responsivitas */}
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          {/* Memuat font Poppins dari Google Fonts */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+
+          {/* Background Bubble Layer - TIDAK DIUBAH */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute top-10 left-10 w-24 h-24 rounded-full border-4 border-yellow-400 bg-blue-800/30 blur-sm animate-ping"></div>
+            <div className="absolute bottom-20 right-16 w-32 h-32 rounded-full border-4 border-yellow-200 bg-blue-700/40 blur-sm animate-ping"></div>
+            <div className="absolute top-36 left-1/2 w-40 h-40 rounded-full border-4 border-yellow-200 bg-blue-600/20 blur-lg  transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-5 left-1/3 w-20 h-20 rounded-full border-2 border-yellow-200 bg-blue-600/20 blur-sm"></div>
+            <div className="absolute top-10 right-10 w-24 h-24 rounded-full border-4 border-yellow-400 bg-blue-800/30 blur-sm animate-pulse"></div>
+            <div className="absolute top-20 right-16 w-32 h-32 rounded-full border-4 border-yellow-300 bg-blue-700/40 blur-sm animate-ping"></div>
+            <div className="absolute bottom-36 right-1/2 w-40 h-40 rounded-full border-4 border-yellow-500 bg-blue-700/30 blur-lg transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-5 left-1/3 w-20 h-20 rounded-full border-2 border-yellow-200 bg-blue-600/20 blur-sm animate-ping"></div>
+          </div>
+
+          {/* Konten Utama (Text, Bullet Points, Social Media) */}
+          <div className="absolute md:static z-50 self-center text-white w-10/12 md:w-10/12 lg:w-9/12 p-4 md:p-0">
+            {" "}
+            {/* Menambah padding untuk layar kecil */}
+            {/* Judul Utama yang Lebih Profesional dan Menarik */}
+            <h1 className="text-sm md:text-2xl lg:text-5xl font-bold w-3/4 md:w-full text-left mt-10 font-['Poppins'] tracking-wide leading-tight">
+              {/* Menggunakan warna kuning untuk penekanan pada "Terbukti!" */}
+              <span className="block text-yellow-300 text-xl md:text-3xl lg:text-6xl">
+                Terbukti!
+              </span>
+              <span className="block mt-2 text-white md:text-3xl lg:text-5xl">
+                Ratusan Brand & Industri telah mempercayakan konten pada kami
+              </span>
             </h1>
-            <div>
-              <div className="flex my-2 lg:my-5 space-x-2 lg:space-x-10">
-                <BulletCompoent />
+            {/* Bagian Bullet Points */}
+            <div className="flex my-4 lg:my-8 space-x-2 lg:space-x-10">
+              {" "}
+              {/* Menyesuaikan margin */}
+              <BulletCompoent />
+            </div>
+            {/* Bagian Informasi Sosial Media */}
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8 mt-6">
+              {" "}
+              {/* Menyesuaikan gap dan margin-top */}
+              <p className="text-sm md:text-xl lg:text-2xl 2xl:text-3xl font-medium text-yellow-200">
+                {" "}
+                {/* Mengubah warna teks untuk penekanan */}
+                @teman.scaleup
+              </p>
+              <span className="hidden lg:block h-6 w-px bg-white/50"></span>
+              <div className="flex space-x-3 md:space-x-5  lg:text-3xl text-lg">
+                <SosmedIconComponents />
               </div>
             </div>
-            <p className="text-sm md:text-xl lg:text-2xl 2xl:text-4xl block lg:flex items-center">
-              @teman.scaleup <span className="mx-5 hidden lg:flex">|</span>
-              <span className="flex space-x-5 md:ml-3 ml-0 my-2 md:my-0 text-base md:text-2xl lg:text-2xl 2xl:text-3xl ">
-                <SosmedIconComponents />
-              </span>
-            </p>
           </div>
-          <div className="absolute lg:relative -z-1 bottom-0 right-0">
-            <img
-              src={portfolioheader}
-              alt="portfolio"
-              className="block lg:hidden h-28 md:h-[20vh] lg:h-[35vh] w-auto bottom-0"
-            />
-            <img
-              src={portfolioheader1}
-              alt="portfolio"
-              className="hidden lg:block h-40 md:h-80 lg:h-[80vh] w-auto ml-[50vw] mt-[15vh] "
-            />
+
+          {/* Slider Images - TIDAK DIUBAH */}
+          <div className="absolute -z-1 bottom-0 md:bottom-16 right-0 md:right-1/4">
+            <ImageSlideShowHeaderComponents className="block md:hidden h-[30vh] md:h-[40vh] lg:h-[35vh] w-full bottom-0 right-0" />
+            <ImageSlideShowHeaderComponents className="hidden md:block h-40 md:h-80 lg:h-[80vh] w-full" />
           </div>
         </div>
       </header>
       {/* main  */}
-      <main className="w-full flex justify-center flex-col">
+      <main className="w-full flex justify-center flex-col fadeIn">
         {/* Service Focus */}
-        <section className="w-full flex flex-col py-10 self-center lg:h-[100vh] justify-evenly bg-blue-50">
+        <section className=" w-full flex flex-col py-10 self-center lg:h-[100vh] justify-evenly bg-blue-50">
           <IconServiceFocus className="mt-5 mb-5 h-32 md:h-44 aspect-square self-center" />
           <Text
             family="Radley"
@@ -301,47 +341,66 @@ export default function Home() {
           >
             Manfaat Bisnis / Brand Terkelola Baik di Instagram
           </Text>
-          <div className="w-9/12 md:w-10/12 lg:w-8/12 grid grid-cols-2 md:grid-cols-3 py-3 lg:py-10 gap-5 lg:gap-10 justify-items-center items-center self-center">
-            <div className="w-full flex flex-col justify-center items-center">
+          <div className="w-9/12 md:w-10/12 lg:w-8/12 grid grid-cols-2 md:grid-cols-4 py-3 lg:py-10 gap-5 lg:gap-10 justify-items-center items-center self-center">
+            <div className="w-full h-full flex flex-col justify-start items-center">
               <IconServiceFocus className="h-16 my-3 w-auto" />
-              <h3 className="text-center my-2 md:text-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing
+              <h3 className="text-center my-2 md:text-xl ">
+                <Text family="Poppins">
+                  Meningkatkan Interaksi Pengguna Dengan Konten Brand
+                  (Engagement)
+                </Text>
               </h3>
             </div>
-            <div className="w-full   flex flex-col justify-center items-center">
+            <div className="w-full h-full flex flex-col justify-start items-center">
               <IconServiceFocus className="h-16 my-3 w-auto" />
-              <h3 className="text-center my-2 md:text-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing
+              <h3 className="text-center my-2 md:text-xl ">
+                <Text family="Poppins">
+                  Meningkatkan Kesadaran Brand Terhadap Pengguna Social Media
+                </Text>
+                (Brand Awareness)
               </h3>
             </div>
-            <div className="w-full   flex flex-col justify-center items-center">
+            <div className="w-full h-full flex flex-col justify-start items-center">
               <IconServiceFocus className="h-16 my-3 w-auto" />
-              <h3 className="text-center my-2 md:text-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing
-              </h3>
-            </div>
-            <div className="w-full  flex flex-col justify-center items-center">
-              <IconServiceFocus className="h-16 my-3 w-auto" />
-              <h3 className="text-center my-2 md:text-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing
-              </h3>
-            </div>
-            <div className="w-full   flex flex-col justify-center items-center">
-              <IconServiceFocus className="h-16 my-3 w-auto" />
-              <h3 className="text-center my-2 md:text-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing
+              <h3 className="text-center my-2 md:text-xl ">
+                <Text family="Poppins">Jangkauan Lebih Luas</Text>
               </h3>
             </div>
             <div className="w-full  flex flex-col justify-center items-center">
               <IconServiceFocus className="h-16 my-3 w-auto" />
-              <h3 className="text-center my-2 md:text-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing
+              <h3 className="text-center my-2 md:text-xl ">
+                <Text family="Poppins">
+                  Meningkatkan Brand Image Kepada Pengguna Social Media
+                </Text>
               </h3>
             </div>
-            <div className="flex flex-col items-center col-span-2 md:col-span-3">
+            <div className="w-full h-full flex flex-col justify-start items-center">
+              <IconServiceFocus className="h-16 my-3 w-auto" />
+              <h3 className="text-center my-2 md:text-xl ">
+                <Text family="Poppins">
+                  Memperluas Jangkauan Demografis Dengan Strategi Tertentu
+                </Text>
+              </h3>
+            </div>
+            <div className="w-full h-full flex flex-col justify-start items-center">
+              <IconServiceFocus className="h-16 my-3 w-auto" />
+              <h3 className="text-center my-2 md:text-xl ">
+                <Text family="Poppins">
+                  Dapat Meningkatkan Konversi Untuk Pembelian Atau Pendaftaran
+                  Terhadap Brand
+                </Text>
+              </h3>
+            </div>
+            <div className="w-full h-full flex flex-col justify-start items-center">
               <IconServiceFocus className="h-16 my-3 w-auto " />
-              <h3 className="text-center my-2 w-3/4 md:text-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing
+              <h3 className="text-center my-2 w-3/4 md:text-xl ">
+                <Text family="Poppins">Meningkatkan Kepercayaan Konsumen</Text>
+              </h3>
+            </div>
+            <div className="w-full h-full flex flex-col justify-start items-center">
+              <IconServiceFocus className="h-16 my-3 w-auto " />
+              <h3 className="text-center my-2 w-3/4 md:text-xl ">
+                <Text family="Poppins">Dapat Mengikuti Trend Konsumen</Text>
               </h3>
             </div>
           </div>
@@ -378,7 +437,7 @@ export default function Home() {
             >
               Client Kami
             </Text>
-            <div className="flex flex-row flex-nowrap overflow-x-scroll overflow-y-hidden space-x-5 lg:space-x-7 mx-5  items-center h-fit snap-x">
+            <div className="flex flex-row flex-nowrap overflow-x-scroll overflow-y-hidden space-x-5 lg:space-x-7 mx-5  items-center h-fit snap-x ">
               {clients.map((client) => {
                 return (
                   <div className="h-16 md:h-28 2xl:40 aspect-square snap-center ">
@@ -599,8 +658,10 @@ export default function Home() {
             <div className="grid grid-cols-[20%_80%] justify-items-start items-center">
               <MdEditNote className="h-8 md:h-14 w-auto inline justify-self-center" />
               <h1 className="text-lg md:text-2xl ">
-                kami satu-satunya yang memberikan GARANSI jika telat posting,
-                bonus 3 konten di hari berikutnya.
+                Garansi Teman Bisnis Sejati! Nggak cuma bikin konten, kami juga
+                siap jadi teman curhat bisnis Anda. Layanan ramah dan bisa jadi
+                teman brainstrorming ide konten untuk bisnis Anda. Nikmati
+                layanan Konsultasi Gratis
               </h1>
             </div>
           </div>
@@ -612,35 +673,36 @@ export default function Home() {
               Harga Mulai dari:
             </h1>
             <h2 className="text-3xl text-center">
-              <s>Rp 300.000</s>
+              <s>Rp 400.000</s>
             </h2>
             <h1 className="text-6xl md:text-8xl text-center text-blue-700">
-              Rp 150K
+              Rp 250K
             </h1>
           </Font>
         </section>
         {/* CTA Order */}
-        <section className="">
+        {/* <section className="">
           <div className=" h-full flex justify-center items-center bg-blue-200">
-            <Font family="Radley">
-              <div className="bg-white rounded-xl py-5 flex flex-col my-10 px-5">
-                <div className="flex items-center justify-center ">
-                  <h1 className="font-bold text-center text-lg my-2">
-                    Ingin Kerjasama Dengan
-                  </h1>
-                  <LogoComponent className="w-fit h-8 mb-3" />
-                </div>
-                <h1 className="text-center text-sm my-3">
+            <div className="bg-white rounded-xl py-5 flex flex-col my-10 px-5 w-3/4 md:w-1/4">
+              <div className="flex items-center justify-center ">
+                <h1 className="font-bold text-center text-lg my-2">
+                  <Text family="Radley">Ingin Kerjasama Dengan</Text>
+                </h1>
+                <LogoComponent className="w-fit h-8 mb-3" />
+              </div>
+              <Font family="Radley">
+                <h1 className="text-center text-sm md:text-lg my-3">
                   Harga Berubah Sewaktu - waktu <br /> Segera Hubungi Kami
                 </h1>
-                <ButtonComponent
-                  text="Klik Disini"
-                  className=" bg-blue-600 text-white text-sm py-2 px-3 my-3"
-                />
-              </div>
-            </Font>
+              </Font>
+              <ButtonComponent
+                text="Klik Disini"
+                className=" bg-blue-600 text-white text-sm py-2 px-3 my-3 md:text-lg"
+              />
+            </div>
           </div>
-        </section>
+        </section> */}
+        <CallToActionWA />
         {/* Pricelist */}
         <section className=" w-full bg-yellow-50 flex justify-center">
           <div className="w-11/12 md:w-11/12 lg:w-10/12 flex flex-col lg:py-10 self-center justify-center items-center my-5">
@@ -649,7 +711,7 @@ export default function Home() {
                 Price List
               </h1>
             </Font>
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5  py-3 lg:py-10 gap-5 justify-items-center items-start self-center">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  py-3 lg:py-10 gap-5 justify-items-center items-start self-center">
               {/* Pricelist per paket 150K */}
               <div className="w-full flex flex-col justify-center items-center h-full">
                 <div className="w-full bg-lime-600 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
@@ -657,7 +719,7 @@ export default function Home() {
                     <Text family="Radley">Paket Hemat</Text>
                     <Font family="Radley">
                       <h1 className="text-6xl">
-                        150K <span className="text-lg">(IDR)</span>
+                        250K <span className="text-lg">(IDR)</span>
                       </h1>
                     </Font>
                     <div className="w-1/2 h-1 bg-white my-5 rounded-full"></div>
@@ -712,7 +774,10 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        Total jatah konten 12 Konten Gambar (Jpg)
+                        Total jatah konten{" "}
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          9 Konten Gambar (Jpg)
+                        </b>
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -736,26 +801,27 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500">Free</b> : Make over bio
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          Free
+                        </b>{" "}
+                        : Make over bio
                       </h1>
                     </div>
                   </div>
                   <div className="my-5 self-center py-5">
-                    <button className="rounded-xl bg-white shadow font-bold text-black py-3 px-3 ">
-                      Order Paket Hemat
-                    </button>
+                    <ButtonOrderPaket paket="Paket Hemat" />
                   </div>
                 </div>
               </div>
 
-              {/* Pricelist per paket 500K*/}
+              {/* Pricelist per paket 350K*/}
               <div className="w-full flex flex-col justify-center items-center h-full ">
-                <div className="w-full bg-violet-600 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                <div className="w-full bg-blue-600 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
-                    <Text family="Radley">Paket Reguler</Text>
+                    <Text family="Radley">Paket Cermat</Text>
                     <Font family="Radley">
                       <h1 className="text-6xl">
-                        500K <span className="text-lg">(IDR)</span>
+                        450K <span className="text-lg">(IDR)</span>
                       </h1>
                     </Font>
                     <div className="w-1/2 h-1 bg-white my-5 rounded-full"></div>
@@ -810,8 +876,12 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        Total jatah <b>konten 30</b> Konten terdiri dari 29
-                        konten Gambar (Jpg), 1 konten caorusel
+                        Total jatah konten{" "}
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          {" "}
+                          15 Konten terdiri dari 8 video reels dan 7 konten
+                          gambar (.jpeg){" "}
+                        </b>
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -836,7 +906,10 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500">Free</b> : Make over bio
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          Free
+                        </b>{" "}
+                        : Make over bio
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -844,15 +917,130 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500">Free</b> : Multiple Link
-                        Bio Iinstagram
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          Free
+                        </b>{" "}
+                        : Multiple Link Bio Iinstagram
                       </h1>
                     </div>
                   </div>
                   <div className="my-5 self-center py-5">
-                    <button className="rounded-xl bg-white shadow font-bold text-black py-3 px-3 ">
-                      Order Paket Reguler
-                    </button>
+                    <ButtonOrderPaket paket="Paket Cermat" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Pricelist per paket 500K*/}
+              <div className="w-full flex flex-col justify-center items-center h-full ">
+                <div className="w-full bg-violet-600 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
+                  <div>
+                    <Text family="Radley">Paket Reguler</Text>
+                    <Font family="Radley">
+                      <h1 className="text-6xl">
+                        600K <span className="text-lg">(IDR)</span>
+                      </h1>
+                    </Font>
+                    <div className="w-1/2 h-1 bg-white my-5 rounded-full"></div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        kamu tinggal <b>TERIMA BERES AJA!</b>
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        Posting <b>SETIAP HARI</b>termasuk hari <b> LIBUR </b>
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        Ide Konten & Materi Konten dari kami
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">Copywriting Konten & Caption</h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        Hashtag yang teriset dan relate di setiap konten
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        1 konten = 1 design + copywriting + caption & hashtag
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        Total jatah konten{" "}
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          {" "}
+                          30 Konten terdiri dari full gambar (jpg){" "}
+                        </b>
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        Setiap hari keluar atau posting 1 konten (di jam prime
+                        time)
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        Bisa Request konsep / referensi tone warna
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          Free
+                        </b>{" "}
+                        : Make over bio
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
+                      <div className="inline">
+                        <BsPencilFill />
+                      </div>
+                      <h1 className="inline">
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          Free
+                        </b>{" "}
+                        : Multiple Link Bio Iinstagram
+                      </h1>
+                    </div>
+                  </div>
+                  <div className="my-5 self-center py-5">
+                    <ButtonOrderPaket paket="Paket Reguler" />
                   </div>
                 </div>
               </div>
@@ -864,7 +1052,7 @@ export default function Home() {
                     <Text family="Radley">Paket Business</Text>
                     <Font family="Radley">
                       <h1 className="text-6xl">
-                        750K <span className="text-lg">(IDR)</span>
+                        850K <span className="text-lg">(IDR)</span>
                       </h1>
                     </Font>
                     <div className="w-1/2 h-1 bg-white my-5 rounded-full"></div>
@@ -919,8 +1107,12 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        Total jatah <b> konten 30</b> Konten terdiri dari 15
-                        konten Gambar (Jpg), 15 konten <b> VIDEO REELS</b>
+                        Total jatah{" "}
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          {" "}
+                          30 Konten terdiri dari 15 konten Gambar (Jpg), 15
+                          konten VIDEO REELS
+                        </b>
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -945,7 +1137,7 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        7 Icon Sorotan untuk highlight story
+                        4 Icon Sorotan untuk highlight story
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -954,7 +1146,10 @@ export default function Home() {
                       </div>
                       <h1 className="inline">
                         {" "}
-                        <b className="text-yellow-500">Free</b> : Make over bio
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          Free
+                        </b>{" "}
+                        : Make over bio
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -962,8 +1157,11 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500"> Free </b> : Multiple
-                        Link Bio Iinstagram
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          {" "}
+                          Free{" "}
+                        </b>{" "}
+                        : Multiple Link Bio Iinstagram
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -972,21 +1170,21 @@ export default function Home() {
                       </div>
                       <h1 className="inline">
                         {" "}
-                        <b className="text-yellow-500">Free</b> : Balas Komentar
-                        Postingan
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          Free
+                        </b>{" "}
+                        : Balas Komentar Postingan
                       </h1>
                     </div>
                   </div>
                   <div className="my-5 self-center py-5">
-                    <button className="rounded-xl bg-white shadow font-bold text-black py-3 px-3 ">
-                      Order Paket Business
-                    </button>
+                    <ButtonOrderPaket paket="Paket Business" />
                   </div>
                 </div>
               </div>
 
               {/* Pricelist per paket 900K*/}
-              <div className="w-full flex flex-col justify-center items-center h-full lg:hidden 2xl:flex ">
+              {/* <div className="w-full flex flex-col justify-center items-center h-full">
                 <div className="w-full bg-slate-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
                     <Text family="Radley">Paket Platinum</Text>
@@ -1048,10 +1246,9 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        Total jatah <b> konten 30</b> Konten terdiri dari 5
-                        konten Gambar (Jpg),
+                        Total jatah <b> konten 30</b> Konten terdiri dari
                         <b className="text-yellow-500 ml-2">
-                          5 konten caorusel dan 20 konten video REELS
+                          10 Gambar Jpg & 20 Video
                         </b>
                       </h1>
                     </div>
@@ -1077,18 +1274,7 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        7 Icon Sorotan untuk highlight story
-                      </h1>
-                    </div>
-                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                      <div className="inline">
-                        <BsPencilFill />
-                      </div>
-                      <h1 className="inline">
-                        <b className="text-yellow-500 mr-2">
-                          Landing page (Standart) + copy writingnya
-                        </b>
-                        untuk menunjang performance penjualan
+                        4 Icon Sorotan untuk highlight story
                       </h1>
                     </div>
 
@@ -1097,7 +1283,7 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500"> Free</b> : Make over bio
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold"> Free</b> : Make over bio
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -1105,7 +1291,7 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500"> Free</b> : Multiple Link
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold"> Free</b> : Multiple Link
                         Bio Instagram
                       </h1>
                     </div>
@@ -1114,27 +1300,25 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500"> Free</b> : Balas
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold"> Free</b> : Balas
                         Komentar Postingan
                       </h1>
                     </div>
                   </div>
                   <div className="my-5 self-center py-5">
-                    <button className="rounded-xl bg-white shadow font-bold text-black py-3 px-3 ">
-                      Order Paket Platinum
-                    </button>
+                    <ButtonOrderPaket paket="Paket Platinum" />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Pricelist per paket 1200K*/}
-              <div className="w-full flex flex-col justify-center items-center h-full md:col-span-2 lg:col-span-1 md:w-1/2 lg:w-full lg:hidden 2xl:flex">
+              <div className="w-full flex flex-col justify-center items-center h-full  ">
                 <div className="w-full bg-red-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
                   <div>
                     <Text family="Radley">Paket Exclusive</Text>
                     <Font family="Radley">
                       <h1 className="text-6xl">
-                        1200K <span className="text-lg">(IDR)</span>
+                        1300K <span className="text-lg">(IDR)</span>
                       </h1>
                     </Font>
                     <div className="w-1/2 h-1 bg-white my-5 rounded-full"></div>
@@ -1190,13 +1374,9 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        Total jatah konten <b>45 Konten</b> terdiri dari
+                        Total jatah konten
                         <b className="text-yellow-500 ml-1">
-                          35 konten Gambar (Jpg), 5 konten caorusel dan 5 konten
-                          video
-                        </b>
-                        <b className="text-yellow-500 ml-2">
-                          5 konten caorusel dan 20 konten video REELS
+                          30 Konten terdiri dari Full VIDEO
                         </b>
                       </h1>
                     </div>
@@ -1222,18 +1402,7 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        7 Icon Sorotan untuk highlight story
-                      </h1>
-                    </div>
-                    <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                      <div className="inline">
-                        <BsPencilFill />
-                      </div>
-                      <h1 className="inline">
-                        <b className="text-yellow-500 mr-2">
-                          Landing page (Exclusive) + copy writingnya
-                        </b>
-                        untuk menunjang performance penjualan
+                        4 Icon Sorotan untuk highlight story
                       </h1>
                     </div>
 
@@ -1242,7 +1411,11 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500"> Free</b> : Make over bio
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          {" "}
+                          Free
+                        </b>{" "}
+                        : Make over bio
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -1250,8 +1423,11 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500"> Free</b> : Multiple Link
-                        Bio Instagram
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          {" "}
+                          Free
+                        </b>{" "}
+                        : Multiple Link Bio Instagram
                       </h1>
                     </div>
                     <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
@@ -1259,308 +1435,16 @@ export default function Home() {
                         <BsPencilFill />
                       </div>
                       <h1 className="inline">
-                        <b className="text-yellow-500"> Free</b> : Balas
-                        Komentar Postingan
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
+                          {" "}
+                          Free
+                        </b>{" "}
+                        : Balas Komentar Postingan
                       </h1>
                     </div>
                   </div>
                   <div className="my-5 self-center py-5">
-                    <button className="rounded-xl bg-white shadow font-bold text-black py-3 px-3 ">
-                      Order Paket Exclusive
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Responsif Price 900K & 1200K */}
-              <div className="col-span-3 hidden lg:grid grid-cols-2 gap-5 justify-items-center 2xl:hidden">
-                {/* Pricelist per paket 900K*/}
-
-                <div className="w-3/4 flex flex-col justify-center items-center h-full">
-                  <div className="w-full bg-slate-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
-                    <div>
-                      <Text family="Radley">Paket Platinum</Text>
-                      <Font family="Radley">
-                        <h1 className="text-6xl">
-                          900K <span className="text-lg">(IDR)</span>
-                        </h1>
-                      </Font>
-                      <div className="w-1/2 h-1 bg-white my-5 rounded-full"></div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          kamu tinggal <b> TERIMA BERES AJA!</b>
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Posting <b> SETIAP HARI </b> termasuk hari{" "}
-                          <b> LIBUR </b>
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Ide Konten & Materi Konten dari kami
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">Copywriting Konten & Caption</h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Hashtag yang teriset dan relate di setiap konten
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          1 konten = 1 design + copywriting + caption & hashtag
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Total jatah <b> konten 30</b> Konten terdiri dari 5
-                          konten Gambar (Jpg),
-                          <b className="text-yellow-500 ml-2">
-                            5 konten caorusel dan 20 konten video REELS
-                          </b>
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Setiap hari keluar atau posting 1 konten (jam prime
-                          time)
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Bisa Request konsep / referensi tone warna
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          7 Icon Sorotan untuk highlight story
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500 mr-2">
-                            Landing page (Standart) + copy writingnya
-                          </b>
-                          untuk menunjang performance penjualan
-                        </h1>
-                      </div>
-
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500"> Free</b> : Make over
-                          bio
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500"> Free</b> : Multiple
-                          Link Bio Instagram
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500"> Free</b> : Balas
-                          Komentar Postingan
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="my-5 self-center py-5">
-                      <button className="rounded-xl bg-white shadow font-bold text-black py-3 px-3 ">
-                        Order Paket Platinum
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Pricelist per paket 1200K*/}
-                <div className="w-3/4 flex flex-col justify-center items-center h-full ">
-                  <div className="w-full bg-red-700 text-white py-5 px-5 rounded-3xl space-y-3 flex flex-col justify-between shadow-md h-full">
-                    <div>
-                      <Text family="Radley">Paket Exclusive</Text>
-                      <Font family="Radley">
-                        <h1 className="text-6xl">
-                          1200K <span className="text-lg">(IDR)</span>
-                        </h1>
-                      </Font>
-                      <div className="w-1/2 h-1 bg-white my-5 rounded-full"></div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          kamu tinggal <b> TERIMA BERES AJA!</b>
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Posting <b> SETIAP HARI </b> termasuk hari{" "}
-                          <b> LIBUR </b>
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Ide Konten & Materi Konten dari kami
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">Copywriting Konten & Caption</h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Hashtag yang teriset dan relate di setiap konten
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          1 konten = 1 design + copywriting + caption & hashtag
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Total jatah konten <b>45 Konten</b> terdiri dari
-                          <b className="text-yellow-500 ml-1">
-                            35 konten Gambar (Jpg), 5 konten caorusel dan 5
-                            konten video
-                          </b>
-                          <b className="text-yellow-500 ml-2">
-                            5 konten caorusel dan 20 konten video REELS
-                          </b>
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Setiap hari keluar atau posting 1 konten (jam prime
-                          time)
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          Bisa Request konsep / referensi tone warna
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          7 Icon Sorotan untuk highlight story
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500 mr-2">
-                            Landing page (Exclusive) + copy writingnya
-                          </b>
-                          untuk menunjang performance penjualan
-                        </h1>
-                      </div>
-
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500"> Free</b> : Make over
-                          bio
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500"> Free</b> : Multiple
-                          Link Bio Instagram
-                        </h1>
-                      </div>
-                      <div className="grid grid-cols-[10%_90%] justify-items-start items-center">
-                        <div className="inline">
-                          <BsPencilFill />
-                        </div>
-                        <h1 className="inline">
-                          <b className="text-yellow-500"> Free</b> : Balas
-                          Komentar Postingan
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="my-5 self-center py-5">
-                      <button className="rounded-xl bg-white shadow font-bold text-black py-3 px-3 ">
-                        Order Paket Exclusive
-                      </button>
-                    </div>
+                    <ButtonOrderPaket paket="Paket Exclusive" />
                   </div>
                 </div>
               </div>
@@ -1570,7 +1454,7 @@ export default function Home() {
         {/* Review Hasil */}
         <section className="w-11/12 md:w-10/12 flex flex-col lg:py-10 self-center justify-center items-center my-5">
           <Font family="Radley">
-            <h1 className="text-center py-3 text-2xl md:text-4xl 2xl:text-6xl font-extrabold self-center flex justify-center items-end ">
+            <h1 className="my-5 text-center py-3 text-2xl md:text-4xl 2xl:text-6xl font-extrabold self-center flex justify-center items-end ">
               Review Hasil Optimasi Instagram
             </h1>
           </Font>
@@ -1586,33 +1470,33 @@ export default function Home() {
                 ></iframe>
                 <h1 className="text-center my-3 md:hidden w-3/4">
                   <Text family="poppins" className="font-bold ">
-                    Review Optimasi Instagram @bimbelprivat.palu selama 12 Hari
+                    Review Optimasi Instagram @bimbelprivat.palu Selama 12 Hari
                   </Text>
                 </h1>
               </div>
-              <Font family="poppins">
-                <h1 className="font-bold hidden md:flex justify-start items-end ">
+              <Font family="Poppins">
+                <h1 className="font-bold hidden md:flex justify-start items-center md:text-2xl">
                   By
                   <span className="">
-                    <LogoComponent className="h-7 inline mb-1" />
+                    <LogoComponent className="h-16 inline mb-1" />
                   </span>
                 </h1>
-                <h1 className="text-left hidden md:inline  font-bold">
+                <h1 className="text-left hidden md:inline  lg:text-2xl font-bold">
                   Review Optimasi Instagram @bimbelprivat.palu selama 12 Hari
                 </h1>
               </Font>
             </div>
             {/* part Video Review */}
             <div className="flex flex-col md:grid grid-cols-2 justify-center md:justify-end items-center text-right gap-5">
-              <Font family="poppins">
-                <h1 className="font-bold hidden md:flex justify-end items-end ">
+              <Font family="Poppins">
+                <h1 className="font-bold hidden md:flex justify-end items-center md:text-2xl">
                   By
                   <span className="">
-                    <LogoComponent className="h-7 inline mb-1" />
+                    <LogoComponent className="h-16 inline mb-1" />
                   </span>
                 </h1>
-                <h1 className="hidden md:inline  font-bold">
-                  Review 30 Hari bersama akun IG @kambing_palembang
+                <h1 className="hidden md:inline  lg:text-2xl font-bold">
+                  Review 30 Hari Bersama Akun IG @kambing_palembang
                 </h1>
               </Font>
               <div className="flex flex-col items-center md:items-start">
@@ -1624,7 +1508,7 @@ export default function Home() {
                 ></iframe>
                 <h1 className="text-center my-3 md:hidden w-3/4">
                   <Text family="poppins" className="font-bold ">
-                    12 Hari Bersama Bimbel Private Palu
+                    Review 30 Hari Bersama Bersama Akun IG @kambing_palembang
                   </Text>
                 </h1>
               </div>
@@ -1640,33 +1524,33 @@ export default function Home() {
                 ></iframe>
                 <h1 className="text-center my-3 md:hidden w-3/4">
                   <Text family="poppins" className="font-bold ">
-                    Review 30 hari bersama @Sehati.Homecare
+                    Review 30 Hari Bersama @Sehati.Homecare
                   </Text>
                 </h1>
               </div>
               <Font family="poppins">
-                <h1 className="font-bold hidden md:flex justify-start items-end ">
+                <h1 className="font-bold hidden md:flex justify-start items-center md:text-2xl">
                   By
                   <span className="">
-                    <LogoComponent className="h-7 inline mb-1" />
+                    <LogoComponent className="h-16 inline mb-1" />
                   </span>
                 </h1>
-                <h1 className="text-left hidden md:inline  font-bold">
-                  Review 30 hari bersama @Sehati.Homecare
+                <h1 className="text-left hidden md:inline  lg:text-2xl font-bold">
+                  Review 30 Hari Bersama @Sehati.Homecare
                 </h1>
               </Font>
             </div>
             {/* part Video Review */}
             <div className="flex flex-col md:grid grid-cols-2 justify-center md:justify-end items-center text-right gap-5">
-              <Font family="poppins">
-                <h1 className="font-bold hidden md:flex justify-end items-end ">
+              <Font family="Poppins">
+                <h1 className="font-bold hidden md:flex justify-end items-center md:text-2xl">
                   By
                   <span className="">
-                    <LogoComponent className="h-7 inline mb-1" />
+                    <LogoComponent className="h-16 inline mb-1" />
                   </span>
                 </h1>
-                <h1 className="hidden md:inline  font-bold">
-                  Review 60 Hari bersama @gulzar_travel
+                <h1 className="hidden md:inline  font-bold md:text-2xl">
+                  Review 60 Hari Bersama @gulzar_travel
                 </h1>
               </Font>
               <div className="flex flex-col items-center md:items-start">
@@ -1678,7 +1562,7 @@ export default function Home() {
                 ></iframe>
                 <h1 className="text-center my-3 md:hidden w-3/4">
                   <Text family="poppins" className="font-bold ">
-                    Review 60 Hari bersama @gulzar_travel
+                    Review 60 Hari Bersama @gulzar_travel
                   </Text>
                 </h1>
               </div>
@@ -1726,27 +1610,28 @@ export default function Home() {
           </div>
         </section>
         {/* CTA Order */}
-        <section className="">
-          <div className=" h-full flex justify-center items-center bg-blue-200">
-            <Font family="Radley">
-              <div className="bg-white rounded-xl py-5 flex flex-col my-10 px-5">
-                <div className="flex items-center justify-center ">
-                  <h1 className="font-bold text-center text-lg my-2">
-                    Ingin Kerjasama Dengan
-                  </h1>
-                  <LogoComponent className="w-fit h-8 mb-3" />
-                </div>
-                <h1 className="text-center text-sm my-3">
+        {/* <section className="">
+          <div className=" h-full flex justify-center items-center bg-blue-200 px-2 py-2">
+            <div className="bg-white rounded-xl py-5 flex flex-col my-10 px-5 w-full md:w-1/4">
+              <div className="flex items-center justify-center ">
+                <h1 className="font-bold text-center text-lg my-2">
+                  <Text family="Radley">Ingin Kerjasama Dengan</Text>
+                </h1>
+                <LogoComponent className="w-fit h-8 mb-3" />
+              </div>
+              <Font family="Radley">
+                <h1 className="text-center text-sm md:text-lg my-3">
                   Harga Berubah Sewaktu - waktu <br /> Segera Hubungi Kami
                 </h1>
-                <ButtonComponent
-                  text="Klik Disini"
-                  className=" bg-blue-600 text-white text-sm py-2 px-3 my-3"
-                />
-              </div>
-            </Font>
+              </Font>
+              <ButtonComponent
+                text="Klik Disini"
+                className=" bg-blue-600 text-white text-sm py-2 px-3 my-3 md:text-lg"
+              />
+            </div>
           </div>
-        </section>
+        </section> */}
+        <CallToActionWA />
       </main>
       <FooterComponent />
       <div className="h-16 bg-zinc-400 md:hidden"></div>

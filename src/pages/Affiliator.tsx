@@ -9,6 +9,8 @@ import Font, { Text } from "react-font";
 import { GrLineChart } from "react-icons/gr";
 import { BsPencilFill } from "react-icons/bs";
 import FooterComponent from "../components/FooterComponent";
+import CallToActionAffiliate from "../components/CallToActionAffiliate";
+import NavbarMenu from "../components/NavbarMenu";
 
 export default function Affiliator() {
   const portfolioheader = require("./dist/img/sampleportfolio.png");
@@ -20,7 +22,7 @@ export default function Affiliator() {
       {/* Header Design */}
       <header className="relative w-full">
         {/* Navbar Menu */}
-        <div className="absolute w-full flex justify-center z-50">
+        {/* <div className="absolute w-full flex justify-center z-50">
           <div className="flex w-11/12 md:w-10/12 lg:w-9/12 justify-items-center justify-center  md:justify-between py-0 md:py-2 ">
             <LogoComponent className="h-5 md:h-10 lg:h-15 w-auto" />
             <MenuComponent className="text-white self-center text-base lg:text-xl " />
@@ -28,9 +30,44 @@ export default function Affiliator() {
           <div className="fixed inset-x-0 bottom-0 md:hidden ">
             <FixBottomMenuComponent />
           </div>
-        </div>
-        {/* Hero Section */}
-        <div className="relative flex justify-center h-[35vh] md:h-[30vh] lg:h-[100vh]">
+        </div> */}
+
+        <NavbarMenu />
+        <div
+          className="relative md:grid md:grid-cols-2 justify-items-center flex justify-around h-[35vh] md:h-[30vh] lg:h-[100vh] overflow-hidden bg-blue-500" // Warna biru dominan
+          style={{
+            backgroundImage:
+              'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="%23172554"/><path d="M0 20L20 0H0V20Z" fill="%23FACC15" opacity="0.1"/></svg>\')', // Pola segitiga kecil kuning samar
+            backgroundSize: "70px 70px", // Ukuran pola
+          }}
+        >
+          {/* Memuat Tailwind CSS CDN untuk styling */}
+          <script src="https://cdn.tailwindcss.com"></script>
+          {/* Meta viewport untuk responsivitas */}
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          {/* Memuat font Poppins dari Google Fonts */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+
+          {/* Background Bubble Layer - TIDAK DIUBAH */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute top-10 left-10 w-24 h-24 rounded-full border-4 border-yellow-400 bg-blue-800/30 blur-sm animate-ping"></div>
+            <div className="absolute bottom-20 right-16 w-32 h-32 rounded-full border-4 border-yellow-200 bg-blue-700/40 blur-sm animate-ping"></div>
+            <div className="absolute top-36 left-1/2 w-40 h-40 rounded-full border-4 border-yellow-200 bg-blue-600/20 blur-lg  transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-5 left-1/3 w-20 h-20 rounded-full border-2 border-yellow-200 bg-blue-600/20 blur-sm"></div>
+            <div className="absolute top-10 right-10 w-24 h-24 rounded-full border-4 border-yellow-400 bg-blue-800/30 blur-sm animate-pulse"></div>
+            <div className="absolute top-20 right-16 w-32 h-32 rounded-full border-4 border-yellow-300 bg-blue-700/40 blur-sm animate-ping"></div>
+            <div className="absolute bottom-36 right-1/2 w-40 h-40 rounded-full border-4 border-yellow-500 bg-blue-700/30 blur-lg transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-5 left-1/3 w-20 h-20 rounded-full border-2 border-yellow-200 bg-blue-600/20 blur-sm animate-ping"></div>
+          </div>
+
+          {/* Konten Utama (Text, Bullet Points, Social Media) */}
+
           <div className="absolute z-50 self-center text-white w-10/12 md:w-10/12 lg:w-9/12">
             <h1 className="text-sm md:text-2xl lg:text-4xl   font-bold w-3/4 md:w-1/2 text-left mt-10">
               MAU DAPAT INCOME PULUHAN JUTA MELALUI PROGRAM AFFILIATOR
@@ -48,7 +85,7 @@ export default function Affiliator() {
               <BsPencilFill />
               <h1>Dijamin halal dan berkah</h1>
               <BsPencilFill />
-              <h1>Bisa berpeluang bisa Dapat Passive Income berjuta - juta</h1>
+              <h1>Berpeluang bisa Dapat Passive Income berjuta - juta</h1>
             </div>
           </div>
           <div className="absolute lg:absolute -z-1 bottom-0 right-0">
@@ -67,7 +104,7 @@ export default function Affiliator() {
       </header>
       <main>
         {/* list commision */}
-        <section>
+        <section className="fadeIn py-5">
           <div className="w-full flex justify-center items-center">
             <div className="w-full md:w-10/12 lg:w-8/12  grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-5 items-center justify-items-center">
               <div>
@@ -161,7 +198,7 @@ export default function Affiliator() {
         <section>
           <div className="flex items-center justify-center my-5">
             <iframe
-              className="w-11/12 h-[25vh] lg:h-[65vh] 2xl:h-[100vh]"
+              className="w-11/12 md:w-9/12 h-[25vh] lg:h-[65vh] 2xl:h-[75vh]"
               src="https://www.youtube.com/embed/cMmAv5pwn68"
               title="Cara Mudah Jadi Affiliator"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -169,7 +206,7 @@ export default function Affiliator() {
           </div>
         </section>
         {/* button Hubungi Kami */}
-        <section className="">
+        {/* <section className="">
           <div className=" h-full flex justify-center items-center bg-blue-200">
             <Font family="Radley">
               <div className="bg-white rounded-xl py-5 flex flex-col my-10 px-5">
@@ -189,7 +226,8 @@ export default function Affiliator() {
               </div>
             </Font>
           </div>
-        </section>
+        </section> */}
+        <CallToActionAffiliate />
       </main>
       <FooterComponent />
       <div className="h-16 bg-zinc-400 md:hidden"></div>
