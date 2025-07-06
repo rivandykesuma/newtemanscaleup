@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/newtemanscaleup/static/css/main.de409950.css",
-    "main.js": "/newtemanscaleup/static/js/main.14b761c6.js",
+    "main.css": "/newtemanscaleup/static/css/main.3b74269c.css",
+    "main.js": "/newtemanscaleup/static/js/main.ab9b73c6.js",
     "static/media/trinixsystems.png": "/newtemanscaleup/static/media/trinixsystems.708c3885c1317762a2e5.png",
     "static/media/aktor.png": "/newtemanscaleup/static/media/aktor.074ee8766f83f1b95471.png",
     "static/media/imagesquare.png": "/newtemanscaleup/static/media/imagesquare.98e1fa3ffe5225454a6e.png",
     "static/media/sampleportfolio.png": "/newtemanscaleup/static/media/sampleportfolio.84668c5b25aacdcfeb97.png",
-    "static/media/logo.svg": "/newtemanscaleup/static/media/logo.b7f101a3007d7919064aea7ba15fdb9f.svg",
     "static/media/image.png": "/newtemanscaleup/static/media/image.4182a2cf42e60d4c55ad.png",
+    "static/media/logo.png": "/newtemanscaleup/static/media/logo.af6050bd6f5f4c385bcf.png",
     "static/media/graphinstagram.png": "/newtemanscaleup/static/media/graphinstagram.76cb76739a561b29ee9d.png",
-    "static/media/logo1.svg": "/newtemanscaleup/static/media/logo1.64a1d61eb982e89590a9bb7a1e21af26.svg",
     "static/media/iconFokusLayanan.svg": "/newtemanscaleup/static/media/iconFokusLayanan.bf66d7ef892feae84244dea4a3b6098e.svg",
     "static/media/AllService.svg": "/newtemanscaleup/static/media/AllService.0ad4c4745a2786886b6d79e2a3ac5f14.svg",
     "static/media/goals.svg": "/newtemanscaleup/static/media/goals.c958ad22a7f78d5a0c2a633732b555be.svg",
@@ -17,11 +16,11 @@
     "static/media/grow.svg": "/newtemanscaleup/static/media/grow.1b49188a08e5b4417b73294e047abd31.svg",
     "static/media/dekstopheader.svg": "/newtemanscaleup/static/media/dekstopheader.8e80cd26166c3125be01.svg",
     "static/media/arrow.svg": "/newtemanscaleup/static/media/arrow.c218c9908738447b7ae3bded2419edaf.svg",
-    "main.de409950.css.map": "/newtemanscaleup/static/css/main.de409950.css.map",
-    "main.14b761c6.js.map": "/newtemanscaleup/static/js/main.14b761c6.js.map"
+    "main.3b74269c.css.map": "/newtemanscaleup/static/css/main.3b74269c.css.map",
+    "main.ab9b73c6.js.map": "/newtemanscaleup/static/js/main.ab9b73c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.de409950.css",
-    "static/js/main.14b761c6.js"
+    "static/css/main.3b74269c.css",
+    "static/js/main.ab9b73c6.js"
   ]
 }
