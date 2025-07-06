@@ -1374,7 +1374,7 @@ export default function Home() {
                       </div>
                       <h1 className="inline">
                         Total jatah konten
-                        <b className="text-yellow-500 ml-1">
+                        <b className="text-black underline text-xl px-2 rounded-2xl bg-opacity-90 font-bold">
                           30 Konten terdiri dari Full VIDEO
                         </b>
                       </h1>

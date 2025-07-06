@@ -266,20 +266,20 @@ export default function FooterComponent() {
               <h3 className="text-yellow-300 font-bold text-3xl mb-6 pb-2 border-b border-yellow-300/30">
                 Menu
               </h3>
-              <ul className="space-y-3  text-lg">
+              <ul className="space-y-3 text-lg">
                 {[
-                  "Home",
-                  "Layanan Kami",
-                  "Galery Kami",
-                  "Join Affiliator",
-                  "Hubungi Kami",
-                ].map((item) => (
-                  <li key={item}>
+                  { label: "Home", link: "/" },
+                  { label: "Layanan Kami", link: "/layanan" },
+                  { label: "Galery Kami", link: "/portfolio" },
+                  { label: "Join Affiliator", link: "/affiliator" },
+                  { label: "Hubungi Kami", link: "/contact" },
+                ].map(({ label, link }) => (
+                  <li key={label}>
                     <Link
-                      to="/"
+                      to={link}
                       className="block text-white hover:text-yellow-300 transition-colors"
                     >
-                      {item}
+                      {label}
                     </Link>
                   </li>
                 ))}

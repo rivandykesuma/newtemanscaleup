@@ -226,7 +226,7 @@ function CallToActionWA() {
                     id="nameServiceOrder"
                     value={nameClient}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-black"
                     onChange={(e) => setNameClient(e.target.value)}
                   />
                 </div>
@@ -248,7 +248,7 @@ function CallToActionWA() {
                       value={igAccountClient}
                       id="igAccountClient"
                       required
-                      className="w-full pl-8 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                      className="w-full pl-8 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-black"
                       onChange={(e) => setIgAccountClient(e.target.value)}
                     />
                   </div>
