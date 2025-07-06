@@ -128,6 +128,9 @@ function CallToActionAffiliate() {
           {/* Header Section */}
           <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-center">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-400 rounded-full opacity-10"></div>
+            {/* <div className="absolute top-2 right-60 w-40 h-40 bg-white rounded-full opacity-10"></div> */}
+            {/* <div className="absolute top-10 right-72 w-40 h-40 bg-white rounded-full opacity-10"></div> */}
+            {/* <div className="absolute top-20 right-60 w-40 h-40 bg-white rounded-full opacity-20"></div> */}
             <div className="relative z-10 space-y-3">
               <h1 className="font-serif font-bold text-3xl text-white mb-2">
                 <Text family="Radley">Ingin Join Affiliator Dengan</Text>
@@ -135,7 +138,7 @@ function CallToActionAffiliate() {
 
               <div className="w-24 h-1 bg-yellow-300 rounded-full mx-auto my-3"></div>
 
-              <LogoComponent className="w-auto h-10 mx-auto text-white opacity-95" />
+              <LogoComponent className="w-auto h-56 mx-auto text-white opacity-95" />
 
               <Font family="Radley">
                 <p className="text-blue-100 text-lg mt-4">

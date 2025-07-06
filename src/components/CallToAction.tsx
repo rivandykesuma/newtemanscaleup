@@ -173,7 +173,7 @@ function CallToActionWA() {
                 </h1>
 
                 <div className="w-24 h-1 bg-yellow-300 rounded-full my-2 opacity-80"></div>
-                <LogoComponent className="w-auto h-10 mb-3 text-white opacity-90 hover:opacity-100 transition-opacity" />
+                <LogoComponent className="w-auto h-56 mb-3 text-white opacity-90 hover:opacity-100 transition-opacity" />
                 <div className="w-24 h-1 bg-yellow-300 rounded-full my-1 opacity-80"></div>
               </div>
 

@@ -7,12 +7,12 @@ interface Props {
 }
 
 export default function LogoComponent(props: Props) {
-  // const logo = require("../pages/dist/img/logo1.png");
+  const logo = require("../pages/dist/img/logo.png");
   return (
     <div>
       <Link to="/" className="flex">
-        {/* <img src="/logo.png" alt="Teman ScaleUp" className={props.className} /> */}
-        <Logo className={props.className} />
+        <img src={logo} alt="Teman ScaleUp" className={`${props.className}`} />
+        {/* <Logo className={props.className} /> */}
       </Link>
     </div>
   );

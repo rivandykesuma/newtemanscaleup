@@ -30,7 +30,7 @@ function NavbarMenu() {
         <div className="container mx-auto px-4">
           <div className="flex w-full justify-between items-center py-3 md:py-4">
             {/* Logo */}
-            <LogoComponent className="h-8 md:h-10 lg:h-12 w-auto" />
+            <LogoComponent className="h-8 md:h-12 lg:h-20 w-auto" />
 
             {/* Desktop Menu - Hidden on mobile */}
             <div className="hidden md:block">
